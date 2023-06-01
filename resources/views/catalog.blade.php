@@ -103,7 +103,7 @@
                                 <a class="add-cart" href="#" title="Add to cart" ><i class="icon-bag"></i></a>
                             </div>
                         </div>
-                        <a href="#" title="Bouble Fabric Blazer"><p class="product-title">Bouble Fabric Blazer</p></a>
+                        <a href="#" title="Bouble Fabric Blazer"><p class="product-title">{{ $producer->name }}</p></a>
                         <p class="product-price-old">$700.00</p>
                         <p class="product-price">$69.90</p>
                         <p class="description">Dramatically transition excellent information rather than mission-critical results. Competently communicate fully tested core competencies through holistic resources. Professionally maintain high-payoff best practices whereas user-centric alignments. Intrinsicly engage future-proof best practices whereas economically sound resources. Holisticly maximize multidisciplinary synergy before magnetice-tailers.</p>
