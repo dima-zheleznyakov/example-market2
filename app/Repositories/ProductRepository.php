@@ -8,7 +8,24 @@ use Illuminate\Pagination\Paginator;
 
 class ProductRepository
 {
-    public function get(){
-        return Product::all();
+    /**
+     * Index
+     *
+     * @return LengthAwarePaginator
+     */
+    public function index(): LengthAwarePaginator
+    {
+        return Product::paginate(10);
     }
+
+    public function getPaginateByCatalogId(int $catalogId)
+    {
+        return Product::where('id_catalog', '=', $catalogId)->paginate(10);
+    }
+
+    public function getPaginateById(int $id)
+    {
+        return Product::where('id', '=', $id)->first();
+    }
+
 }

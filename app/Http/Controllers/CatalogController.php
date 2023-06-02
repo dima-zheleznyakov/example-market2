@@ -2,19 +2,55 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Services\CatalogServices;
+use App\Http\Services\CatalogService;
+use App\Http\Services\ProductService;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Foundation\Application;
 use Illuminate\Http\Request;
 
 class CatalogController extends Controller
 {
     private $service;
 
-    public function __construct(CatalogServices $CatalogServices){
-        $this->service = $CatalogServices;
+    private $productService;
+
+    /**
+     * Constructor
+     *
+     * @param CatalogService $catalogService
+     */
+    public function __construct(CatalogService $catalogService, ProductService $productService)
+    {
+        $this->service        = $catalogService;
+        $this->productService = $productService;
+
     }
 
-    public function get(){
-        $catalogs = $this->service->get();
-        return view('catalog', compact("catalogs"));
+    /**
+     * Index catalog
+     *
+     * @return Application|Factory|View
+     */
+    public function index()
+    {
+        $catalogs = $this->service->index();
+        $products = $this->productService->indexPaginate();
+
+        return view('catalog', compact('catalogs', 'products'));
     }
+
+    /**
+     * Get catalog
+     *
+     * @return Application|Factory|View
+     */
+    public function get(int $id)
+    {
+        $catalogs = $this->service->index();
+        $products = $this->productService->getPaginateByCatalogId($id);
+
+        return view('catalog', compact('catalogs', 'products'));
+    }
+
 }

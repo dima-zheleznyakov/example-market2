@@ -182,15 +182,16 @@
 {{--                            </li>--}}
                             <li class="level1 dropdown"><a href="/catalog" title="collections">Каталог</a>
                                 <ul class="menu-level-1 dropdown-menu">
-                                    <li class="level2"><a href="#" title="Lookbook Style 1" target="_blank">Lookbook Style 1</a>
-                                        <ul class="menu-level-2">
-                                            <li class="level3"><a href="#" title="Lookbook Style 1" target="_blank">Lookbook Style 1</a></li>
-                                            <li class="level3"><a href="#" title="Lookbook Style 2" target="_blank">Lookbook Style 2</a></li>
-                                            <li class="level3"><a href="#" title="Lookbook Style 3" target="_blank">Lookbook Style 3</a></li>
-                                            <li class="level3"><a href="#" title="Lookbook Style 4" target="_blank">Lookbook Style 4</a></li>
-                                        </ul>
+                                    @foreach($catalogs as $catalog)
+                                    <li class="level2"><a href="#" title="Lookbook Style 1" target="_blank">{{ $catalog->title }}</a>
+{{--                                        <ul class="menu-level-2">--}}
+{{--                                            <li class="level3"><a href="#" title="Lookbook Style 1" target="_blank">Lookbook Style 1</a></li>--}}
+{{--                                            <li class="level3"><a href="#" title="Lookbook Style 2" target="_blank">Lookbook Style 2</a></li>--}}
+{{--                                            <li class="level3"><a href="#" title="Lookbook Style 3" target="_blank">Lookbook Style 3</a></li>--}}
+{{--                                            <li class="level3"><a href="#" title="Lookbook Style 4" target="_blank">Lookbook Style 4</a></li>--}}
+{{--                                        </ul>--}}
                                     </li>
-                                    <li class="level2"><a href="lookbook_v3.html" title="Lookbook Style 2" target="_blank">Lookbook Style 2</a></li>
+                                    @endforeach
                                 </ul>
                             </li>
                             <li class="level1"><a href="#" title="collections">Контакты</a></li>

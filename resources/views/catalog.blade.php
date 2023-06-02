@@ -2,7 +2,7 @@
 @section('content')
     <div class="container">
         <div class="banner-header banner-lbook3 space-30">
-            <img src="assets/images/banner-mansory.jpg" alt="Banner-header">
+            <img src="{{ asset('assets/images/banner-mansory.jpg') }}" alt="Banner-header">
             <div class="text">
                 <h3>all products</h3>
                 <p><a href="#" title="Home">Home</a><i class="fa fa-caret-right"></i>All Products</p>
@@ -17,7 +17,7 @@
                     <div class="float-left">
                         <span class="col active"></span>
                         <span class="list"></span>
-                        <p class="result-count">Showing 1-12 of 30 relults</p>
+                        <p class="result-count">Showing 1-10 of {{ $products->count() }} relults</p>
                     </div>
                     <div class="float-right">
                         <form action="#" method="get" class="order-by">
@@ -36,11 +36,11 @@
             <div class="products ver2 grid_full grid_sidebar hover-shadow furniture">
                 <div class="item-inner">
 
-{{--                    @foreach($product as $item)--}}
+                    @foreach($products as $product)
                     <div class="product">
                         <div class="product-images">
                             <a href="#" title="product-images">
-                                <img class="primary_image" src="assets/images/products/featured/1.jpg" alt=""/>
+                                <img class="primary_image" src="{{asset($product->img_url)}}" alt=""/>
                             </a>
                             <div class="action">
                                 <a class="wish" href="#" title="Wishlist" ><i class="icon icon-heart"></i></a>
@@ -48,9 +48,9 @@
                                 <a class="add-cart" href="#" title="Add to cart" ><i class="icon-bag"></i></a>
                             </div>
                         </div>
-                        <a href="#" title="Bouble Fabric Blazer"><p class="product-title">  </p></a>
-                        <p class="product-price-old">$700.00</p>
-                        <p class="product-price">$69.90</p>
+                        <a href="/products/{{$product->id}}" title="Bouble Fabric Blazer"><p class="product-title"> {{ $product->title }} </p></a>
+{{--                        <p class="product-price-old">$700.00</p>--}}
+                        <p class="product-price">{{ $product->price }}</p>
                         <p class="description">Dramatically transition excellent information rather than mission-critical results. Competently communicate fully tested core competencies through holistic resources. Professionally maintain high-payoff best practices whereas user-centric alignments. Intrinsicly engage future-proof best practices whereas economically sound resources. Holisticly maximize multidisciplinary synergy before magnetice-tailers.</p>
 
                         <div class="social box">
@@ -63,8 +63,10 @@
                         </div>
                     </div>
                     <!-- End product -->
-{{--                    @endforeach--}}
-
+                    @endforeach
+                        <div >
+                            {{$products->links()}}
+                        </div>
 
                 </div>
             </div>
@@ -88,7 +90,7 @@
                 <ul class="product-categories">
 
                     @foreach($catalogs as $catalog)
-                    <li><a href="{{ $catalog->id }}" title="{{ $catalog->title }}">{{ $catalog->title }}</a></li>
+                    <li><a href="/catalog/{{ $catalog->id }}" title="{{ $catalog->title }}">{{ $catalog->title }}</a></li>
                     @endforeach
 
 
@@ -104,7 +106,7 @@
                 <ul>
                     <li>
                         <a class="images" href="#" title="images">
-                            <img class="img-responsive" src="assets/images/products/furniture/1.jpg" alt="images">
+                            <img class="img-responsive" src="{{asset('assets/images/products/furniture/1.jpg')}}" alt="images">
                         </a>
                         <div class="text">
                             <h2>
@@ -115,7 +117,7 @@
                     </li>
                     <li>
                         <a class="images" href="#" title="images">
-                            <img class="img-responsive" src="assets/images/products/furniture/1.jpg" alt="">
+                            <img class="img-responsive" src="{{asset('assets/images/products/furniture/1.jpg')}}" alt="">
                         </a>
                         <div class="text">
                             <h2>
@@ -126,7 +128,7 @@
                     </li>
                     <li>
                         <a class="images" href="#" title="images">
-                            <img class="img-responsive" src="assets/images/products/furniture/1.jpg" alt="">
+                            <img class="img-responsive" src="{{asset('assets/images/products/furniture/1.jpg')}}" alt="">
                         </a>
                         <div class="text">
                             <h2>
@@ -137,7 +139,7 @@
                     </li>
                     <li>
                         <a class="images" href="#" title="images">
-                            <img class="img-responsive" src="assets/images/products/furniture/1.jpg" alt="">
+                            <img class="img-responsive" src="{{asset('assets/images/products/furniture/1.jpg')}}" alt="">
                         </a>
                         <div class="text">
                             <h2>

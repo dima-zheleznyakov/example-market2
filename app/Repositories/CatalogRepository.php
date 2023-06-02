@@ -8,7 +8,7 @@ use Illuminate\Pagination\Paginator;
 
 class CatalogRepository
 {
-    public function get(){
+    public function index(){
         return Catalog::all();
     }
 }
