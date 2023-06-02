@@ -129,6 +129,27 @@
         </div>
         <!-- End container -->
     </div>
+
+
+    <!-- End container -->
+    <div class="home1-banner1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 space-30 float-left">
+                    <a href="#" title="cat-box">
+                        <img class="img-responsive" src="assets/images/home3-catbox1.jpg" alt="images">
+                    </a>
+                </div>
+                <div class="col-md-6 col-sm-6 space-30 float-right">
+                    <a href="#" title="cat-box">
+                        <img class="img-responsive" src="assets/images/home3-catbox1.jpg" alt="images">
+                    </a>
+                </div>
+            </div>
+            <!-- End row -->
+        </div>
+    </div>
+
     <div class="container">
         <div class="shipping-v2 home3-shiping space-30">
             <div class="col-md-3 col-sm-3 col-xs-6">
@@ -154,94 +175,6 @@
         </div>
         <!-- End container -->
     </div>
-
-    <!-- End container -->
-    <div class="home1-banner1">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-sm-6 space-30 float-left">
-                    <a href="#" title="cat-box">
-                        <img class="img-responsive" src="assets/images/home3-catbox1.jpg" alt="images">
-                    </a>
-                </div>
-                <div class="col-md-6 col-sm-6 space-30 float-right">
-                    <a href="#" title="cat-box">
-                        <img class="img-responsive" src="assets/images/home3-catbox1.jpg" alt="images">
-                    </a>
-                </div>
-            </div>
-            <!-- End row -->
-        </div>
-    </div>
-    <!-- End banner home 1 -->
-    <div class="container">
-        <div class="special home3-special bg-images box space-30" style="background:url('assets/images/special-home3.jpg') no-repeat center;">
-            <div class="col-md-6 col-sm-6 float-left align-right">
-                <img class="img-responsive float-right" src="assets/images/home3-images-special.jpg" alt="images">
-            </div>
-            <!-- End col-md-7 -->
-            <div class="col-md-6 col-sm-6 float-right align-left">
-                <div class="special-content">
-                    <h4 class="title">Special Offers</h4>
-                    <h3>Get 30% off</h3>
-                    <h5>your order of $100 or more</h5>
-                    <div class="time" data-countdown="countdown" data-date="12-17-2017-10-20-30"></div>
-                    <div class="box">
-                        <a class="prev" href="#" title="prev"><i class="fa fa-angle-left"></i></a>
-                        <a class="next" href="#" title="next"><i class="fa fa-angle-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <!-- End col-md-5 -->
-        </div>
-    </div>
-    <!-- End container -->
-    <div class="slider-user box space-30" style="background:url(assets/images/bg-slider-user.jpg);">
-        <div class="container container-ver2 center">
-            <div class="slider-dot-images hidden-nav center">
-                <div class="items" >
-                    <p>I rarely write reviews for products but with the EngoCreative, I am more than grateful. The site is fully customizable and you can really feel like playing while designing the site! Thanks again for having made such a convenient, yet fully-functional theme.</p>
-                    <h3>ONATHAN VANCE</h3>
-                    <a href="#" title="CEO">CEO & Founder</a>
-                    <img class="thumb hidden" src="assets/images/about1.jpg" alt="images">
-                </div>
-                <!-- End items -->
-                <div class="items" >
-                    <p>I rarely write reviews for products but with the EngoCreative, I am more than grateful. The site is fully customizable and you can really feel like playing while designing the site! Thanks again for having made such a convenient,yet fully-functional theme.</p>
-                    <h3>ONATHAN VANCE</h3>
-                    <a href="#" title="CEO">CEO & Founder</a>
-                    <img class="thumb hidden" src="assets/images/about1.jpg" alt="images">
-                </div>
-                <!-- End items -->
-                <div class="items" >
-                    <p>I rarely write reviews for products but with the EngoCreative, I am more than grateful. The site is fully customizable and you can really feel like playing while designing the site! Thanks again for having made such a convenient, yet fully-functional theme.</p>
-                    <h3>JONATHAN VANCE</h3>
-                    <a href="#" title="CEO">CEO & Founder</a>
-                    <img class="thumb hidden" src="assets/images/about1.jpg" alt="images">
-                </div>
-                <!-- End items -->
-
-                <div class="items" >
-                    <p>I rarely write reviews for products but with the EngoCreative, I am more than grateful. The site is fully customizable and you can really feel like playing while designing the site! Thanks again for having made such a convenient, yet fully-functional theme.</p>
-                    <h3>ONATHAN VANCE</h3>
-                    <a href="#" title="CEO">CEO & Founder</a>
-                    <img class="thumb hidden" src="assets/images/about1.jpg" alt="images">
-                </div>
-                <!-- End items -->
-
-                <div class="items" >
-                    <p>I rarely write reviews for products but with the EngoCreative, I am more than grateful. The site is fully customizable and you can really feel like playing while designing the site! Thanks again for having made such a convenient, yet fully-functional theme.</p>
-                    <h3>ONATHAN VANCE</h3>
-                    <a href="#" title="CEO">CEO & Founder</a>
-                    <img class="thumb hidden" src="assets/images/about1.jpg" alt="images">
-                </div>
-                <!-- End items -->
-
-            </div>
-        </div>
-        <!-- End container -->
-    </div>
-    <!-- End slider-user -->
     <div class="container container-ver2">
         <div class="title-text-v2">
             <h3>Featured Products</h3>
@@ -741,53 +674,7 @@
         <i class="fa fa-long-arrow-up"></i>
     </div>
 
-    <div class="container container-ver2 space-30">
-        <div class="home3-newsletter">
-            <div class="row">
-                <div class="col-md-6 col-sm-6 float-left center">
-                    <div class="home3-newsletter-content box">
-                        <h3>NewsLetter</h3>
-                        <p>Get exclusive deals you wont find anywhere else straight to your inbox!</p>
-                        <form action="#" method="get" accept-charset="utf-8">
-                            <input type="text" onblur="if (this.value == '') {this.value = 'email@example.com';}" onfocus="if(this.value != '') {this.value = '';}" value="email@example.com" class="input-text required-entry validate-email" title="Sign up for our newsletter" id="newsletter" name="email">
-                            <button class="link-v1 rt" title="Subscribe" type="submit">Subscribe</button>
-                        </form>
-                    </div>
-                    <!-- End newsletter -->
-                </div>
-                <div class="col-md-6 col-sm-6 float-right align-left ">
-                    <div class="home3-latest-news box">
-                        <h2>Latest News</h2>
-                        <div class="item">
-                            <div class="date float-left">
-                                <p class="day">15</p>
-                                <p class="month">August</p>
-                            </div>
-                            <div class="text">
-                                <a class="title" href="#" title="title">The new Brand Identity last the Bahamas</a>
-                                <p>Heading two Praesent id mollis mauris. Duis in ultricies dolor, ac sagittis massa. Suspendisse potenti. Vivamus auctor, velit ac ...</p>
-                                <a class="read-more">Read more</a>
-                            </div>
-                        </div>
-                        <!-- End item -->
-                        <div class="item">
-                            <div class="date float-left">
-                                <p class="day">15</p>
-                                <p class="month">August</p>
-                            </div>
-                            <div class="text">
-                                <a class="title" href="#" title="title">The new Brand Identity last the Bahamas</a>
-                                <p>Heading two Praesent id mollis mauris. Duis in ultricies dolor, ac sagittis massa. Suspendisse potenti. Vivamus auctor, velit ac ...</p>
-                                <a class="read-more">Read more</a>
-                            </div>
-                        </div>
-                        <!-- End item -->
-                    </div>
-                    <!-- End latest -->
-                </div>
-            </div>
-        </div>
-    </div>
+
     <!-- End home3-newsletter -->
     <div class="container container-ver2">
         <div class="brand-content no-border">
@@ -812,19 +699,7 @@
         </div>
     </div>
     <!-- End brand -->
-    <div class="container">
-        <div class="instagram">
-            <div class="item"><a href="#" title="instagram"><img src="assets/images/instagram/1.jpg" alt="instagram"></a></div>
-            <div class="item"><a href="#" title="instagram"><img src="assets/images/instagram/1.jpg" alt="instagram"></a></div>
-            <div class="item"><a href="#" title="instagram"><img src="assets/images/instagram/1.jpg" alt="instagram"></a></div>
-            <div class="item"><a href="#" title="instagram"><img src="assets/images/instagram/1.jpg" alt="instagram"></a></div>
-            <div class="item"><a href="#" title="instagram"><img src="assets/images/instagram/1.jpg" alt="instagram"></a></div>
-            <div class="item"><a href="#" title="instagram"><img src="assets/images/instagram/1.jpg" alt="instagram"></a></div>
-            <div class="item"><a href="#" title="instagram"><img src="assets/images/instagram/1.jpg" alt="instagram"></a></div>
-            <div class="item"><a href="#" title="instagram"><img src="assets/images/instagram/1.jpg" alt="instagram"></a></div>
-        </div>
-    </div>
-    <!-- End instagram -->
+
 
 
 @endsection

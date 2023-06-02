@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CatalogController;
 use App\Http\Controllers\ProducerController;
 use Illuminate\Support\Facades\Route;
 
@@ -28,9 +29,16 @@ Route::get('register', function (){
 });
 
 
+//
+//Route::get('catalog', function (){
+//    return view('catalog');
+//});
+//Route::get('catalog', [ProducerController::class, 'get'])->name('catalog');
 
 
-Route::get('catalog', [ProducerController::class, 'get'])->name('catalog');
+Route::get('catalog', [CatalogController::class, 'get']);
+//Route::get('catalog', [ProducerController::class, 'get']);
+
 
 
 Route::get('/dashboard', function () {

@@ -18,7 +18,7 @@ class ProducerController extends Controller
     {
         $producer = $this->service->get(3);
 
-        return view('catalog', compact('producer'));
+//        return view('catalog', compact('producer'));
     }
 
     public function create($request)
