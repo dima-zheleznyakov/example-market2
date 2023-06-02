@@ -9,6 +9,6 @@ use Illuminate\Pagination\Paginator;
 class ProductRepository
 {
     public function get(){
-        Product::all();
+        return Product::all();
     }
 }

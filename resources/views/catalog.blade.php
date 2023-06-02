@@ -35,6 +35,8 @@
             </div>
             <div class="products ver2 grid_full grid_sidebar hover-shadow furniture">
                 <div class="item-inner">
+
+{{--                    @foreach($product as $item)--}}
                     <div class="product">
                         <div class="product-images">
                             <a href="#" title="product-images">
@@ -46,7 +48,7 @@
                                 <a class="add-cart" href="#" title="Add to cart" ><i class="icon-bag"></i></a>
                             </div>
                         </div>
-                        <a href="#" title="Bouble Fabric Blazer"><p class="product-title"> </p></a>
+                        <a href="#" title="Bouble Fabric Blazer"><p class="product-title">  </p></a>
                         <p class="product-price-old">$700.00</p>
                         <p class="product-price">$69.90</p>
                         <p class="description">Dramatically transition excellent information rather than mission-critical results. Competently communicate fully tested core competencies through holistic resources. Professionally maintain high-payoff best practices whereas user-centric alignments. Intrinsicly engage future-proof best practices whereas economically sound resources. Holisticly maximize multidisciplinary synergy before magnetice-tailers.</p>
@@ -61,6 +63,8 @@
                         </div>
                     </div>
                     <!-- End product -->
+{{--                    @endforeach--}}
+
 
                 </div>
             </div>
@@ -82,27 +86,12 @@
             <aside class="widget widget_product_categories">
                 <h3 class="widget-title">Categories</h3>
                 <ul class="product-categories">
+
                     @foreach($catalogs as $catalog)
                     <li><a href="{{ $catalog->id }}" title="{{ $catalog->title }}">{{ $catalog->title }}</a></li>
                     @endforeach
 
-{{--                    <li><a href="#" title="Men">Men</a>--}}
-{{--                        <ul class="children">--}}
-{{--                            <li><a href="#" title="Bag & Luggage">Bag & Luggage</a></li>--}}
-{{--                            <li><a href="#" title="Eyewear">Eyewear</a></li>--}}
-{{--                            <li><a href="#" title="Jewelry">Jewelry</a></li>--}}
-{{--                            <li><a href="#" title="Shoes">Shoes</a></li>--}}
-{{--                            <li><a href="#" title="Skyrts">Skyrts</a></li>--}}
-{{--                        </ul>--}}
-{{--                    </li>--}}
-{{--                    <li><a href="#" title="woment">woment</a>--}}
-{{--                        <ul>--}}
-{{--                            <li><a href="#" title="Bag">Bag</a></li>--}}
-{{--                            <li><a href="#" title="Bed & Bath">Bed & Bath</a></li>--}}
-{{--                            <li><a href="#" title="Sport tops & Vest">Sport tops & Vest</a></li>--}}
-{{--                            <li><a href="#" title="Sport undewear">Sport undewear</a></li>--}}
-{{--                        </ul>--}}
-{{--                    </li>--}}
+
                 </ul>
             </aside>
             <aside class="widget widget_price">
