@@ -33,8 +33,6 @@ class CatalogService
      */
     public function index()
     {
-        $model = $this->repository->index();
-
-        return $model;
+        return $this->repository->index();
     }
 }

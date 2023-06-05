@@ -20,11 +20,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomePageController::class, 'index']);
 
 
-
 Route::get('login', function (){
     return view('login');
 });
-
 Route::get('register', function (){
     return view('register');
 });
@@ -32,8 +30,10 @@ Route::get('register', function (){
 
 Route::get('catalog', [CatalogController::class, 'index']);
 Route::get('catalog/{id}', [CatalogController::class, 'get']);
-
 Route::get('products/{id}', [ProductController::class, 'get']);
+
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

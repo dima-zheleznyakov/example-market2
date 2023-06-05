@@ -10,7 +10,7 @@
                     <!-- SLIDE  -->
                     <li data-transition="random" data-slotamount="6" data-masterspeed="1000" >
                         <!-- MAIN IMAGE -->
-                        <img src="assets/images/hom3-slideshow1.jpg"  alt="home3-slideshow"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+                        <img src="/assets/images/hom3-slideshow1.jpg"  alt="home3-slideshow"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
 
                         <!-- LAYER NR. 9 -->
                         <div class="tp-caption color-brand customin randomrotateout font-play tp-resizeme size-100"
@@ -59,7 +59,7 @@
                     <!-- SLIDER -->
                     <!-- SLIDE  -->
                     <li data-transition="random" data-slotamount="7" data-masterspeed="1000" >
-                        <img src="assets/images/hom3-slideshow2.jpg"  alt="Futurelife-home2-slideshow"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+                        <img src="/assets/images/hom3-slideshow2.jpg"  alt="Futurelife-home2-slideshow"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
                         <!-- LAYER NR. 3 -->
 
                         <!-- LAYER NR. 3 -->
@@ -137,12 +137,12 @@
             <div class="row">
                 <div class="col-md-6 col-sm-6 space-30 float-left">
                     <a href="#" title="cat-box">
-                        <img class="img-responsive" src="assets/images/home3-catbox1.jpg" alt="images">
+                        <img class="img-responsive" src="/assets/images/home3-catbox1.jpg" alt="images">
                     </a>
                 </div>
                 <div class="col-md-6 col-sm-6 space-30 float-right">
                     <a href="#" title="cat-box">
-                        <img class="img-responsive" src="assets/images/home3-catbox1.jpg" alt="images">
+                        <img class="img-responsive" src="/assets/images/home3-catbox1.jpg" alt="images">
                     </a>
                 </div>
             </div>
@@ -191,8 +191,8 @@
                         <div class="product">
                             <div class="product-images">
                                 <a href="#" title="product-images">
-                                    <img class="primary_image" src="assets/images/products/featured/1.jpg" alt=""/>
-                                    <img class="secondary_image" src="assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="primary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="secondary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
                                 </a>
                             </div>
                             <a href="#" title="Union Bed"><p class="product-title">Union Bed</p></a>
@@ -204,8 +204,8 @@
                         <div class="product">
                             <div class="product-images">
                                 <a href="#" title="product-images">
-                                    <img class="primary_image" src="assets/images/products/featured/1.jpg" alt=""/>
-                                    <img class="secondary_image" src="assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="primary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="secondary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
                                 </a>
                             </div>
                             <a href="#" title="Union Bed"><p class="product-title">Union Bed</p></a>
@@ -216,21 +216,8 @@
                         <div class="product">
                             <div class="product-images">
                                 <a href="#" title="product-images">
-                                    <img class="primary_image" src="assets/images/products/featured/1.jpg" alt=""/>
-                                    <img class="secondary_image" src="assets/images/products/featured/1.jpg" alt=""/>
-                                </a>
-                            </div>
-                            <a href="#" title="Union Bed"><p class="product-title">Union Bed</p></a>
-                            <p class="product-price-old">$700.00</p>
-                            <p class="product-price">$350.00</p>
-
-                        </div>
-                        <!-- End item -->
-                        <div class="product">
-                            <div class="product-images">
-                                <a href="#" title="product-images">
-                                    <img class="primary_image" src="assets/images/products/featured/1.jpg" alt=""/>
-                                    <img class="secondary_image" src="assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="primary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="secondary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
                                 </a>
                             </div>
                             <a href="#" title="Union Bed"><p class="product-title">Union Bed</p></a>
@@ -242,8 +229,8 @@
                         <div class="product">
                             <div class="product-images">
                                 <a href="#" title="product-images">
-                                    <img class="primary_image" src="assets/images/products/featured/1.jpg" alt=""/>
-                                    <img class="secondary_image" src="assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="primary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="secondary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
                                 </a>
                             </div>
                             <a href="#" title="Union Bed"><p class="product-title">Union Bed</p></a>
@@ -255,8 +242,8 @@
                         <div class="product">
                             <div class="product-images">
                                 <a href="#" title="product-images">
-                                    <img class="primary_image" src="assets/images/products/featured/1.jpg" alt=""/>
-                                    <img class="secondary_image" src="assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="primary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="secondary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
                                 </a>
                             </div>
                             <a href="#" title="Union Bed"><p class="product-title">Union Bed</p></a>
@@ -268,8 +255,8 @@
                         <div class="product">
                             <div class="product-images">
                                 <a href="#" title="product-images">
-                                    <img class="primary_image" src="assets/images/products/featured/1.jpg" alt=""/>
-                                    <img class="secondary_image" src="assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="primary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="secondary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
                                 </a>
                             </div>
                             <a href="#" title="Union Bed"><p class="product-title">Union Bed</p></a>
@@ -281,20 +268,8 @@
                         <div class="product">
                             <div class="product-images">
                                 <a href="#" title="product-images">
-                                    <img class="primary_image" src="assets/images/products/featured/1.jpg" alt=""/>
-                                    <img class="secondary_image" src="assets/images/products/featured/1.jpg" alt=""/>
-                                </a>
-                            </div>
-                            <a href="#" title="Union Bed"><p class="product-title">Union Bed</p></a>
-                            <p class="product-price-old">$700.00</p>
-                            <p class="product-price">$350.00</p>
-                        </div>
-                        <!-- End item -->
-                        <div class="product">
-                            <div class="product-images">
-                                <a href="#" title="product-images">
-                                    <img class="primary_image" src="assets/images/products/featured/1.jpg" alt=""/>
-                                    <img class="secondary_image" src="assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="primary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="secondary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
                                 </a>
                             </div>
                             <a href="#" title="Union Bed"><p class="product-title">Union Bed</p></a>
@@ -306,8 +281,20 @@
                         <div class="product">
                             <div class="product-images">
                                 <a href="#" title="product-images">
-                                    <img class="primary_image" src="assets/images/products/featured/1.jpg" alt=""/>
-                                    <img class="secondary_image" src="assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="primary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="secondary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
+                                </a>
+                            </div>
+                            <a href="#" title="Union Bed"><p class="product-title">Union Bed</p></a>
+                            <p class="product-price-old">$700.00</p>
+                            <p class="product-price">$350.00</p>
+                        </div>
+                        <!-- End item -->
+                        <div class="product">
+                            <div class="product-images">
+                                <a href="#" title="product-images">
+                                    <img class="primary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="secondary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
                                 </a>
                             </div>
                             <a href="#" title="Union Bed"><p class="product-title">Union Bed</p></a>
@@ -319,8 +306,8 @@
                         <div class="product">
                             <div class="product-images">
                                 <a href="#" title="product-images">
-                                    <img class="primary_image" src="assets/images/products/featured/1.jpg" alt=""/>
-                                    <img class="secondary_image" src="assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="primary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="secondary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
                                 </a>
                             </div>
                             <a href="#" title="Union Bed"><p class="product-title">Union Bed</p></a>
@@ -332,8 +319,21 @@
                         <div class="product">
                             <div class="product-images">
                                 <a href="#" title="product-images">
-                                    <img class="primary_image" src="assets/images/products/featured/1.jpg" alt=""/>
-                                    <img class="secondary_image" src="assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="primary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="secondary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
+                                </a>
+                            </div>
+                            <a href="#" title="Union Bed"><p class="product-title">Union Bed</p></a>
+                            <p class="product-price-old">$700.00</p>
+                            <p class="product-price">$350.00</p>
+
+                        </div>
+                        <!-- End item -->
+                        <div class="product">
+                            <div class="product-images">
+                                <a href="#" title="product-images">
+                                    <img class="primary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="secondary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
                                 </a>
                             </div>
                             <a href="#" title="Union Bed"><p class="product-title">Union Bed</p></a>
@@ -351,8 +351,8 @@
                         <div class="product">
                             <div class="product-images">
                                 <a href="#" title="product-images">
-                                    <img class="primary_image" src="assets/images/products/featured/1.jpg" alt=""/>
-                                    <img class="secondary_image" src="assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="primary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="secondary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
                                 </a>
                             </div>
                             <a href="#" title="Union Bed"><p class="product-title">Union Bed</p></a>
@@ -364,8 +364,8 @@
                         <div class="product">
                             <div class="product-images">
                                 <a href="#" title="product-images">
-                                    <img class="primary_image" src="assets/images/products/featured/1.jpg" alt=""/>
-                                    <img class="secondary_image" src="assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="primary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="secondary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
                                 </a>
                             </div>
                             <a href="#" title="Union Bed"><p class="product-title">Union Bed</p></a>
@@ -376,21 +376,8 @@
                         <div class="product">
                             <div class="product-images">
                                 <a href="#" title="product-images">
-                                    <img class="primary_image" src="assets/images/products/featured/1.jpg" alt=""/>
-                                    <img class="secondary_image" src="assets/images/products/featured/1.jpg" alt=""/>
-                                </a>
-                            </div>
-                            <a href="#" title="Union Bed"><p class="product-title">Union Bed</p></a>
-                            <p class="product-price-old">$700.00</p>
-                            <p class="product-price">$350.00</p>
-
-                        </div>
-                        <!-- End item -->
-                        <div class="product">
-                            <div class="product-images">
-                                <a href="#" title="product-images">
-                                    <img class="primary_image" src="assets/images/products/featured/1.jpg" alt=""/>
-                                    <img class="secondary_image" src="assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="primary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="secondary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
                                 </a>
                             </div>
                             <a href="#" title="Union Bed"><p class="product-title">Union Bed</p></a>
@@ -402,8 +389,8 @@
                         <div class="product">
                             <div class="product-images">
                                 <a href="#" title="product-images">
-                                    <img class="primary_image" src="assets/images/products/featured/1.jpg" alt=""/>
-                                    <img class="secondary_image" src="assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="primary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="secondary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
                                 </a>
                             </div>
                             <a href="#" title="Union Bed"><p class="product-title">Union Bed</p></a>
@@ -415,8 +402,8 @@
                         <div class="product">
                             <div class="product-images">
                                 <a href="#" title="product-images">
-                                    <img class="primary_image" src="assets/images/products/featured/1.jpg" alt=""/>
-                                    <img class="secondary_image" src="assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="primary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="secondary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
                                 </a>
                             </div>
                             <a href="#" title="Union Bed"><p class="product-title">Union Bed</p></a>
@@ -428,8 +415,8 @@
                         <div class="product">
                             <div class="product-images">
                                 <a href="#" title="product-images">
-                                    <img class="primary_image" src="assets/images/products/featured/1.jpg" alt=""/>
-                                    <img class="secondary_image" src="assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="primary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="secondary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
                                 </a>
                             </div>
                             <a href="#" title="Union Bed"><p class="product-title">Union Bed</p></a>
@@ -441,20 +428,8 @@
                         <div class="product">
                             <div class="product-images">
                                 <a href="#" title="product-images">
-                                    <img class="primary_image" src="assets/images/products/featured/1.jpg" alt=""/>
-                                    <img class="secondary_image" src="assets/images/products/featured/1.jpg" alt=""/>
-                                </a>
-                            </div>
-                            <a href="#" title="Union Bed"><p class="product-title">Union Bed</p></a>
-                            <p class="product-price-old">$700.00</p>
-                            <p class="product-price">$350.00</p>
-                        </div>
-                        <!-- End item -->
-                        <div class="product">
-                            <div class="product-images">
-                                <a href="#" title="product-images">
-                                    <img class="primary_image" src="assets/images/products/featured/1.jpg" alt=""/>
-                                    <img class="secondary_image" src="assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="primary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="secondary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
                                 </a>
                             </div>
                             <a href="#" title="Union Bed"><p class="product-title">Union Bed</p></a>
@@ -466,8 +441,20 @@
                         <div class="product">
                             <div class="product-images">
                                 <a href="#" title="product-images">
-                                    <img class="primary_image" src="assets/images/products/featured/1.jpg" alt=""/>
-                                    <img class="secondary_image" src="assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="primary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="secondary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
+                                </a>
+                            </div>
+                            <a href="#" title="Union Bed"><p class="product-title">Union Bed</p></a>
+                            <p class="product-price-old">$700.00</p>
+                            <p class="product-price">$350.00</p>
+                        </div>
+                        <!-- End item -->
+                        <div class="product">
+                            <div class="product-images">
+                                <a href="#" title="product-images">
+                                    <img class="primary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="secondary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
                                 </a>
                             </div>
                             <a href="#" title="Union Bed"><p class="product-title">Union Bed</p></a>
@@ -479,8 +466,8 @@
                         <div class="product">
                             <div class="product-images">
                                 <a href="#" title="product-images">
-                                    <img class="primary_image" src="assets/images/products/featured/1.jpg" alt=""/>
-                                    <img class="secondary_image" src="assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="primary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="secondary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
                                 </a>
                             </div>
                             <a href="#" title="Union Bed"><p class="product-title">Union Bed</p></a>
@@ -492,8 +479,21 @@
                         <div class="product">
                             <div class="product-images">
                                 <a href="#" title="product-images">
-                                    <img class="primary_image" src="assets/images/products/featured/1.jpg" alt=""/>
-                                    <img class="secondary_image" src="assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="primary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="secondary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
+                                </a>
+                            </div>
+                            <a href="#" title="Union Bed"><p class="product-title">Union Bed</p></a>
+                            <p class="product-price-old">$700.00</p>
+                            <p class="product-price">$350.00</p>
+
+                        </div>
+                        <!-- End item -->
+                        <div class="product">
+                            <div class="product-images">
+                                <a href="#" title="product-images">
+                                    <img class="primary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="secondary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
                                 </a>
                             </div>
                             <a href="#" title="Union Bed"><p class="product-title">Union Bed</p></a>
@@ -511,8 +511,8 @@
                         <div class="product">
                             <div class="product-images">
                                 <a href="#" title="product-images">
-                                    <img class="primary_image" src="assets/images/products/featured/1.jpg" alt=""/>
-                                    <img class="secondary_image" src="assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="primary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="secondary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
                                 </a>
                             </div>
                             <a href="#" title="Union Bed"><p class="product-title">Union Bed</p></a>
@@ -524,8 +524,8 @@
                         <div class="product">
                             <div class="product-images">
                                 <a href="#" title="product-images">
-                                    <img class="primary_image" src="assets/images/products/featured/1.jpg" alt=""/>
-                                    <img class="secondary_image" src="assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="primary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="secondary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
                                 </a>
                             </div>
                             <a href="#" title="Union Bed"><p class="product-title">Union Bed</p></a>
@@ -536,21 +536,8 @@
                         <div class="product">
                             <div class="product-images">
                                 <a href="#" title="product-images">
-                                    <img class="primary_image" src="assets/images/products/featured/1.jpg" alt=""/>
-                                    <img class="secondary_image" src="assets/images/products/featured/1.jpg" alt=""/>
-                                </a>
-                            </div>
-                            <a href="#" title="Union Bed"><p class="product-title">Union Bed</p></a>
-                            <p class="product-price-old">$700.00</p>
-                            <p class="product-price">$350.00</p>
-
-                        </div>
-                        <!-- End item -->
-                        <div class="product">
-                            <div class="product-images">
-                                <a href="#" title="product-images">
-                                    <img class="primary_image" src="assets/images/products/featured/1.jpg" alt=""/>
-                                    <img class="secondary_image" src="assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="primary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="secondary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
                                 </a>
                             </div>
                             <a href="#" title="Union Bed"><p class="product-title">Union Bed</p></a>
@@ -562,8 +549,8 @@
                         <div class="product">
                             <div class="product-images">
                                 <a href="#" title="product-images">
-                                    <img class="primary_image" src="assets/images/products/featured/1.jpg" alt=""/>
-                                    <img class="secondary_image" src="assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="primary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="secondary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
                                 </a>
                             </div>
                             <a href="#" title="Union Bed"><p class="product-title">Union Bed</p></a>
@@ -575,8 +562,8 @@
                         <div class="product">
                             <div class="product-images">
                                 <a href="#" title="product-images">
-                                    <img class="primary_image" src="assets/images/products/featured/1.jpg" alt=""/>
-                                    <img class="secondary_image" src="assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="primary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="secondary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
                                 </a>
                             </div>
                             <a href="#" title="Union Bed"><p class="product-title">Union Bed</p></a>
@@ -588,8 +575,8 @@
                         <div class="product">
                             <div class="product-images">
                                 <a href="#" title="product-images">
-                                    <img class="primary_image" src="assets/images/products/featured/1.jpg" alt=""/>
-                                    <img class="secondary_image" src="assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="primary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="secondary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
                                 </a>
                             </div>
                             <a href="#" title="Union Bed"><p class="product-title">Union Bed</p></a>
@@ -601,20 +588,8 @@
                         <div class="product">
                             <div class="product-images">
                                 <a href="#" title="product-images">
-                                    <img class="primary_image" src="assets/images/products/featured/1.jpg" alt=""/>
-                                    <img class="secondary_image" src="assets/images/products/featured/1.jpg" alt=""/>
-                                </a>
-                            </div>
-                            <a href="#" title="Union Bed"><p class="product-title">Union Bed</p></a>
-                            <p class="product-price-old">$700.00</p>
-                            <p class="product-price">$350.00</p>
-                        </div>
-                        <!-- End item -->
-                        <div class="product">
-                            <div class="product-images">
-                                <a href="#" title="product-images">
-                                    <img class="primary_image" src="assets/images/products/featured/1.jpg" alt=""/>
-                                    <img class="secondary_image" src="assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="primary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="secondary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
                                 </a>
                             </div>
                             <a href="#" title="Union Bed"><p class="product-title">Union Bed</p></a>
@@ -626,8 +601,20 @@
                         <div class="product">
                             <div class="product-images">
                                 <a href="#" title="product-images">
-                                    <img class="primary_image" src="assets/images/products/featured/1.jpg" alt=""/>
-                                    <img class="secondary_image" src="assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="primary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="secondary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
+                                </a>
+                            </div>
+                            <a href="#" title="Union Bed"><p class="product-title">Union Bed</p></a>
+                            <p class="product-price-old">$700.00</p>
+                            <p class="product-price">$350.00</p>
+                        </div>
+                        <!-- End item -->
+                        <div class="product">
+                            <div class="product-images">
+                                <a href="#" title="product-images">
+                                    <img class="primary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="secondary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
                                 </a>
                             </div>
                             <a href="#" title="Union Bed"><p class="product-title">Union Bed</p></a>
@@ -639,8 +626,8 @@
                         <div class="product">
                             <div class="product-images">
                                 <a href="#" title="product-images">
-                                    <img class="primary_image" src="assets/images/products/featured/1.jpg" alt=""/>
-                                    <img class="secondary_image" src="assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="primary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="secondary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
                                 </a>
                             </div>
                             <a href="#" title="Union Bed"><p class="product-title">Union Bed</p></a>
@@ -652,8 +639,21 @@
                         <div class="product">
                             <div class="product-images">
                                 <a href="#" title="product-images">
-                                    <img class="primary_image" src="assets/images/products/featured/1.jpg" alt=""/>
-                                    <img class="secondary_image" src="assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="primary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="secondary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
+                                </a>
+                            </div>
+                            <a href="#" title="Union Bed"><p class="product-title">Union Bed</p></a>
+                            <p class="product-price-old">$700.00</p>
+                            <p class="product-price">$350.00</p>
+
+                        </div>
+                        <!-- End item -->
+                        <div class="product">
+                            <div class="product-images">
+                                <a href="#" title="product-images">
+                                    <img class="primary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
+                                    <img class="secondary_image" src="/assets/images/products/featured/1.jpg" alt=""/>
                                 </a>
                             </div>
                             <a href="#" title="Union Bed"><p class="product-title">Union Bed</p></a>
@@ -679,22 +679,22 @@
     <div class="container container-ver2">
         <div class="brand-content no-border">
             <div class="items">
-                <a href="#" title="brand"><img class="img-responsive" src="assets/images/brand-1.png" alt="Brand"></a>
+                <a href="#" title="brand"><img class="img-responsive" src="/assets/images/brand-1.png" alt="Brand"></a>
             </div>
             <div class="items">
-                <a href="#" title="brand"><img class="img-responsive" src="assets/images/brand-1.png" alt="Brand"></a>
+                <a href="#" title="brand"><img class="img-responsive" src="/assets/images/brand-1.png" alt="Brand"></a>
             </div>
             <div class="items">
-                <a href="#" title="brand"><img class="img-responsive" src="assets/images/brand-1.png" alt="Brand"></a>
+                <a href="#" title="brand"><img class="img-responsive" src="/assets/images/brand-1.png" alt="Brand"></a>
             </div>
             <div class="items">
-                <a href="#" title="brand"><img class="img-responsive" src="assets/images/brand-1.png" alt="Brand"></a>
+                <a href="#" title="brand"><img class="img-responsive" src="/assets/images/brand-1.png" alt="Brand"></a>
             </div>
             <div class="items">
-                <a href="#" title="brand"><img class="img-responsive" src="assets/images/brand-1.png" alt="Brand"></a>
+                <a href="#" title="brand"><img class="img-responsive" src="/assets/images/brand-1.png" alt="Brand"></a>
             </div>
             <div class="items">
-                <a href="#" title="brand"><img class="img-responsive" src="assets/images/brand-1.png" alt="Brand"></a>
+                <a href="#" title="brand"><img class="img-responsive" src="/assets/images/brand-1.png" alt="Brand"></a>
             </div>
         </div>
     </div>
