@@ -49,6 +49,8 @@
                         <a class="link-v1 add-cart" title="Add to cart" href="#"><span>Add to cart</span></a>
                         <a class="link-v1 wish" title="Wishlist" href="#"><i class="icon icon-heart"></i></a>
                     </div>
+                    <button class="add-cart" type="button"
+                            data-id="{{$product->id}}" >Add to Cart</button>
                 </div>
                 <!-- End Options -->
             </div>
@@ -59,6 +61,32 @@
         </div>
 
 
+        <script>
+            $(document).ready(function() {
 
+                $('.add-cart').on('click', function(event){
+                    data = [];
+
+                    product_id = $(this).data('id');
+                    quantity   = $(this).prev('input').val();
+
+
+                    $.ajax('/add-to-cart', {
+                        type: 'POST',
+                        data: {
+                            "_token": "{{ csrf_token() }}",
+                            "product_id": product_id,
+                            "quantity" : quantity
+                        },
+                        success: function (data, status, xhr) {
+
+                        }
+                    });
+
+
+                });
+            })
+
+        </script>
 
 @endsection

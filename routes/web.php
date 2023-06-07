@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CartItemController;
 use App\Http\Controllers\CatalogController;
 use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\ProducerController;
@@ -23,7 +24,7 @@ Route::get('/', [HomePageController::class, 'index']);
 Route::get('catalog', [CatalogController::class, 'index']);
 Route::get('catalog/{id}', [CatalogController::class, 'get']);
 Route::get('products/{id}', [ProductController::class, 'get']);
-
+Route::post('add-to-cart', [CartItemController::class, 'addToCart']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
