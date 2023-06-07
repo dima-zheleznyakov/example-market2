@@ -2,17 +2,8 @@
 
 @section('content')
 
-    <div class="container">
-        <div class="banner-header banner-lbook3 space-30">
-            <img src="assets/images/banner-mansory.jpg" alt="Banner-header">
-            <div class="text">
-                <h3>Login/Register</h3>
-                <p><a href="#" title="Home">Home</a><i class="fa fa-caret-right"></i>Login/Register</p>
-            </div>
-        </div>
-    </div>
     <!-- End banner -->
-    <div class="container container-ver2">
+    <div class="container container-ver2 mt-40px">
         <div class="page-login box space-50">
             <div class="row" style="
     display: flex;
@@ -20,7 +11,7 @@
 ">
                 <div class="col-md-4 sign-in space-30">
                     <h3>Войти</h3>
-                    <p>Добро пожаловать, войти в ваш аккаунт</p>
+                    <p>Добро пожаловать, войдите в ваш аккаунт</p>
 
                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                         @csrf

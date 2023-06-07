@@ -14,44 +14,21 @@
     <div class="container">
         <div class="product-details-content">
             <div class="col-md-6 col-sm-6">
-                <div class="slider-for">
-                    <div>
-                      <span class="zoom">
-                        <img class="zoom-images" src="/{{ $product->img_url }}" alt="images">
-                      </span>
-                    </div>
-{{--                    <div>--}}
-{{--                      <span class="zoom">--}}
-{{--                      <img class="zoom-images" src="/{{ $product->img_url }}" alt="images">--}}
-{{--                      </span>--}}
-{{--                    </div>--}}
+                <div class="product__detail-img">
+                    <img src="/{{ $product->img_url }}" alt="{{ $product->title }}">
                 </div>
-                <!-- End slider-for -->
-{{--                <div class="slider-nav">--}}
-{{--                    <div>--}}
-{{--                        <img src="/{{ $product->img_url }}" alt="images">--}}
-{{--                    </div>--}}
-{{--                    <div>--}}
-{{--                        <img src="/{{ $product->img_url }}" alt="images">--}}
-{{--                    </div>--}}
-{{--                </div>--}}
             </div>
             <div class="col-md-6 col-sm-6">
                 <div class="box-details-info">
                     <div class="product-name">
                         <h1>{{ $product->title }}</h1>
                     </div>
-                    <!-- End product-name -->
                     <div class="wrap-price">
-{{--                        <p class="price-old">$700.00</p>--}}
                         <p class="price">{{ $product->price }} Тг.</p>
                     </div>
-                    <!-- End Price -->
                 </div>
-                <!-- End box details info -->
                 <div class="options">
                     {{ $product->short_descr }}
-                    <!-- End action -->
 
                     <div class="box space-20">
                         <div class="row">

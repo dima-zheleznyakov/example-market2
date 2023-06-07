@@ -9922,7 +9922,9 @@ ul.tabs.tabs-title li span.count {
 .banner-header.banner-lbook3 .text img {
   width: auto;
 }
-
+.mt-40px{
+    margin-top: 40px;
+}
 .banner-header.banner-lbook3 .text h3 {
   display: inline-block;
   width: 100%;
@@ -19885,7 +19887,9 @@ nav.pagination a.next:hover i, nav.pagination a.prev:hover i {
   height: 10px;
   background: #cdcdcd;
 }
-
+.product__detail-img img{
+    width: 100%;
+}
 #topbar .float-right .hover-menu:first-child:after {
   width: 0px;
 }
@@ -19893,7 +19897,7 @@ nav.pagination a.next:hover i, nav.pagination a.prev:hover i {
 #topbar .float-right .list-menu {
   background: #fff;
   border: 1px solid #333;
-  min-width: 80px;
+  min-width: 150px;
   text-align: left;
   padding: 0px 15px;
 }

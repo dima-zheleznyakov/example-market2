@@ -31,6 +31,7 @@ class AppServiceProvider extends ServiceProvider
 
         // Передаем $menuCatalog во все шаблоны
         view()->share('menuCatalog', $menuCatalog);
+
     }
 
 

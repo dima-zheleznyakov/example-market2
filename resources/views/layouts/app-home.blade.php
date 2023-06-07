@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/style.css') }}"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('/assets/vendor/owl-slider.css') }}"/>
     <link rel="stylesheet" type="text/css" href="{{ asset('/assets/vendor/slick.css') }}"/>
     <link rel="stylesheet" type="text/css" href="{{ asset('/assets/vendor/settings.css') }}"/>
@@ -35,7 +36,6 @@
 <script src="{{ asset('/assets/js/jquery.themepunch.plugins.min.js') }}"></script>
 <script src="{{ asset('/assets/js/engo-plugins.js') }}"></script>
 <script src="http://maps.googleapis.com/maps/api/js"></script>
-<script src="{{ asset('/assets/js/map-icons.js') }}"></script>
 <script src="{{ asset('/assets/js/store.js') }}"></script>
 <script type="text/javascript">
     $(document).on('ready', function() {

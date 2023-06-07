@@ -29,8 +29,22 @@
                             <a href="#" title="USD">Мой аккаунт</a>
                             <i class="fa fa-angle-down"></i>
                             <ul class="list-menu">
-                                <li><a href="/login" title="USD">Войти</a></li>
-                                <li><a href="/register" title="USD">Регистрация</a></li>
+                                <?php $user = \Illuminate\Support\Facades\Auth::user();?>
+                                @if(!isset($user))
+                                    <li><a href="/login">Войти</a></li>
+                                    <li><a href="/register">Регистрация</a></li>
+                                @else
+                                <li><a href="/register">Моя корзина</a></li>
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+
+                                    <x-dropdown-link :href="route('logout')"
+                                                     onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                        {{ __('Выйти') }}
+                                    </x-dropdown-link>
+                                </form>
+                                @endif
                             </ul>
                         </div>
                         <!-- End hover-menu -->
@@ -71,7 +85,7 @@
                                             <p class="product-price"><span class="price">30000 тг.</span></p>
                                             <p class="qty">Кол.: 3</p>
                                         </div>
-                                        <a class="close" href="#" title="close"><i class="fa fa-times-circle"></i></a>
+                                        <a class="close" href="#" title="close"><i class="fa fa-times" aria-hidden="true"></i></a>
                                     </li>
                                 </ul>
                                 <p class="total"><span class="left">Сумма:</span> <span class="right">90000 тг.</span></p>
