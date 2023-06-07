@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Services\CatalogService;
 use App\Http\Services\ProductService;
+use App\Models\Catalog;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Foundation\Application;
@@ -52,5 +53,7 @@ class CatalogController extends Controller
 
         return view('catalog', compact('catalogs', 'products'));
     }
+
+
 
 }

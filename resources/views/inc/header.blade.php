@@ -91,7 +91,7 @@
                             <li class="level1 active"><a href="/" title="Home">Главная</a></li>
                             <li class="level1 dropdown"><a href="/catalog" title="collections">Каталог</a>
                                 <ul class="menu-level-1 dropdown-menu">
-                                    @foreach($catalogs as $catalog)
+                                    @foreach($menuCatalog as $catalog)
                                     <li class="level2"><a href="/catalog/{{ $catalog->id }}" title="menu">{{ $catalog->title }}</a></li>
                                     @endforeach
                                 </ul>

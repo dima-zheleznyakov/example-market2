@@ -2,7 +2,10 @@
 
 namespace App\Providers;
 
+
+use App\Http\Controllers\MenuCategoryController;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\View\View;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,6 +26,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $catalogController = new MenuCategoryController();
+        $menuCatalog = $catalogController->getMenuCatalog();
 
+        // Передаем $menuCatalog во все шаблоны
+        view()->share('menuCatalog', $menuCatalog);
     }
+
+
 }
