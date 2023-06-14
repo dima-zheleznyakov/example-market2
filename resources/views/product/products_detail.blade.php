@@ -1,92 +1,47 @@
 @extends('layouts.app-home')
 @section('content')
-{{--$product--}}
-<div class="main-content">
-    <div class="container">
-        <div class="banner-header banner-lbook3">
-            <img src="/assets/images/banner-mansory.jpg" alt="Banner-header">
-            <div class="text">
-                <h3></h3>
-                <p><a href="#" title="Home">Главная</a><i class="fa fa-caret-right"></i><a href="#" title="Home">Каталог</a><i class="fa fa-caret-right"></i>{{ $product->title }}</p>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="product-details-content">
-            <div class="col-md-6 col-sm-6">
-                <div class="product__detail-img">
-                    <img src="/{{ $product->img_url }}" alt="{{ $product->title }}">
-                </div>
-            </div>
-            <div class="col-md-6 col-sm-6">
-                <div class="box-details-info">
-                    <div class="product-name">
-                        <h1>{{ $product->title }}</h1>
-                    </div>
-                    <div class="wrap-price">
-                        <p class="price">{{ $product->price }} Тг.</p>
-                    </div>
-                </div>
-                <div class="options">
-                    {{ $product->short_descr }}
 
-                    <div class="box space-20">
-                        <div class="row">
-                            <div class="col-md-5">
-                                <div class="title title-quantity">
-                                    <h3>Количество</h3>
-                                </div>
-                                <form enctype="multipart/form-data">
-                                    <input data-step="1" value="1" title="Qty" min="1" size="4" type="number">
-                                </form>
-                            </div>
-                            <!-- End col-md-5 -->
+    <section class="detail">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <div class="detail-photo laptop">
+                        <img src="/{{ $product->img_url }}" alt="">
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="detail-info">
+                        <div class="breadcrumbs">
+                            <a class="breadcrumbs_item" href="/">Главная</a>
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <a class="breadcrumbs_item" href="/catalog">Каталог</a>
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            @foreach($catalogs as $catalog)
+                                @if($catalog->id == $product->id_catalog)
+                                    <a class="breadcrumbs_item" href="/catalog/{{$catalog->id}}">{{ $catalog->title }}</a>
+                                @endif
+                            @endforeach
                         </div>
-                        <!-- End row -->
+                        <h1 class="title">{{ $product->title }}</h1>
+                        <div class="detail-photo mobile">
+                            <img src="/{{ $product->img_url }}" alt="">
+                        </div>
+                        <div class="price">
+                            <span>Цена:</span> <span>{{ $product->price }}тг.</span>
+                        </div>
+                        <a href="#" class="btn btn-detail-order">
+                            <i class="fa fa-whatsapp"></i> WhatsApp
+                        </a>
                     </div>
-                    <!-- End row -->
-                    <div class="action">
-                        <a class="link-v1 add-cart" title="Add to cart" href="#"><span>Add to cart</span></a>
-                        <a class="link-v1 wish" title="Wishlist" href="#"><i class="icon icon-heart"></i></a>
-                    </div>
-                    <button class="add-cart" type="button"
-                            data-id="{{$product->id}}" >Add to Cart</button>
                 </div>
-                <!-- End Options -->
+            </div>
+            <div class="detail-description">
+                {{ $product->description }}
             </div>
         </div>
-        <!-- End product-details-content -->
-        <div class="hoz-tab-container space-padding-tb-30">
-            {{ $product->description }}
-        </div>
+    </section>
 
 
-        <script>
-            $(document).ready(function() {
 
-                $('.add-cart').on('click', function(event){
-                    data = [];
-
-                    product_id = $(this).data('id');
-                    quantity   = $(this).prev('input').val();
-
-
-                    $.ajax('/add-to-cart', {
-                        type: 'POST',
-                        data: {
-                            "_token": "{{ csrf_token() }}",
-                            "product_id": product_id,
-                            "quantity" : quantity
-                        },
-                        success: function (data, status, xhr) {
-
-                        }
-                    });
-
-
-                });
-            })
-
-        </script>
 
 @endsection

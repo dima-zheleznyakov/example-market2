@@ -3,6 +3,7 @@
 use App\Http\Controllers\CartItemController;
 use App\Http\Controllers\CatalogController;
 use App\Http\Controllers\HomePageController;
+use App\Http\Controllers\PHPMailerController;
 use App\Http\Controllers\ProducerController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
@@ -25,6 +26,8 @@ Route::get('catalog', [CatalogController::class, 'index']);
 Route::get('catalog/{id}', [CatalogController::class, 'get']);
 Route::get('products/{id}', [ProductController::class, 'get']);
 Route::post('add-to-cart', [CartItemController::class, 'addToCart']);
+
+Route::post("send-email", [PHPMailerController::class, "composeEmail"])->name("send-email");
 
 Route::get('/dashboard', function () {
     return view('dashboard');
