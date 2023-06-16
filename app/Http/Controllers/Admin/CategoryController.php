@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Catalog;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -16,7 +16,7 @@ class CategoryController extends Controller
     public function index()
     {
 
-        $categories = Catalog::orderBy('created_at', 'desc')->get();
+        $categories = Category::orderBy('created_at', 'desc')->get();
 
         return view('admin.category.index', [
             'categories' => $categories
@@ -43,7 +43,7 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
 
-        $new_category = new Catalog();
+        $new_category = new Category();
         $new_category->title = $request->title;
         $new_category->description = $request->description;
         $new_category->save();
@@ -55,10 +55,10 @@ class CategoryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Catalog  $catalog
+     * @param  \App\Models\Category  $catalog
      * @return \Illuminate\Http\Response
      */
-    public function show(Catalog $catalog)
+    public function show(Category $catalog)
     {
 
     }
@@ -66,14 +66,14 @@ class CategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Catalog  $catalog
+     * @param  \App\Models\Category  $catalog
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
-    public function edit(Catalog $catalog)
+    public function edit(Category $category)
     {
 
         return view('admin.category.edit', [
-            'category' => $catalog,
+            'category' => $category,
         ]);
 
     }
@@ -82,10 +82,10 @@ class CategoryController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Catalog  $catalog
+     * @param  \App\Models\Category  $catalog
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Catalog $catalog)
+    public function update(Request $request, Category $catalog)
     {
 
     }
@@ -93,10 +93,10 @@ class CategoryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Catalog  $catalog
+     * @param  \App\Models\Category  $catalog
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Catalog $catalog)
+    public function destroy(Category $catalog)
     {
         //
     }

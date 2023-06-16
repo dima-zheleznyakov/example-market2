@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Services\CatalogService;
 use App\Http\Services\ProductService;
-use App\Models\Catalog;
+use App\Models\Category;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Foundation\Application;

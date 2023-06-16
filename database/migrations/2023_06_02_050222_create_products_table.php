@@ -17,7 +17,6 @@ class CreateProductsTable extends Migration
                 $table->id();
                 $table->bigInteger('catalog_id');
                 $table->string('title');
-                $table->text('short_descr');
                 $table->text('description');
                 $table->bigInteger('price');
 

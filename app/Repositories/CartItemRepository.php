@@ -2,7 +2,7 @@
 namespace App\Repositories;
 
 use App\Models\CartItem;
-use App\Models\Catalog;
+use App\Models\Category;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Pagination\Paginator;

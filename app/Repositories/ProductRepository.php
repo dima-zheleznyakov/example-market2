@@ -20,7 +20,7 @@ class ProductRepository
 
     public function getPaginateByCatalogId(int $catalogId)
     {
-        return Product::where('id_catalog', '=', $catalogId)->paginate(10);
+        return Product::where('catalog_id', '=', $catalogId)->paginate(10);
     }
 
     public function getPaginateById(int $id)

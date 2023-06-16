@@ -1,7 +1,7 @@
 <?php
 namespace App\Http\Services;
 
-use App\Models\Catalog;
+use App\Models\Category;
 use App\Repositories\CatalogRepository;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\UploadedFile;
@@ -29,7 +29,7 @@ class CatalogService
     /**
      * Get Catalog
      *
-     * @return Catalog[]|Collection
+     * @return Category[]|Collection
      */
     public function index()
     {

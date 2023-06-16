@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Cart;
 use App\Models\CartItem;
-use App\Models\Catalog;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -17,7 +17,7 @@ class MenuCategoryController extends Controller
      */
     public function getMenuCatalog(){
 
-        return Catalog::all();
+        return Category::all();
 
     }
 
