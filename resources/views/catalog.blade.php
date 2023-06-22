@@ -34,7 +34,9 @@
                                 <div class="col-md-3">
                                     <div class="catalog_item">
                                         <div class="catalog_img">
+                                            <a href="/products/{{$product->id}}">
                                             <img src="{{asset($product->img_url)}}" alt="">
+                                            </a>
                                         </div>
                                         <div class="catalog_info">
                                             <h4 class="catalog_title"><a href="/products/{{$product->id}}">{{ $product->title }}</a></h4>
@@ -63,6 +65,7 @@
                 </div>
             </div>
         </div>
+        {{ $products->links() }}
     </div>
 
 @endsection

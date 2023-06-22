@@ -15,12 +15,12 @@ class ProductRepository
      */
     public function index(): LengthAwarePaginator
     {
-        return Product::paginate(10);
+        return Product::orderBy('created_at', 'desc')->paginate(12);
     }
 
     public function getPaginateByCatalogId(int $catalogId)
     {
-        return Product::where('catalog_id', '=', $catalogId)->paginate(10);
+        return Product::where('catalog_id', '=', $catalogId)->orderBy('created_at', 'desc')->paginate(12);
     }
 
     public function getPaginateById(int $id)

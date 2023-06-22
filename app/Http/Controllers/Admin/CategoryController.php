@@ -55,10 +55,10 @@ class CategoryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Category  $catalog
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function show(Category $catalog)
+    public function show(Category $category)
     {
 
     }
@@ -66,7 +66,7 @@ class CategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Category  $catalog
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
     public function edit(Category $category)
@@ -82,22 +82,31 @@ class CategoryController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Category  $catalog
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Category $catalog)
+    public function update(Request $request, Category $category)
     {
+        $category->title = $request->title;
+        $category->description = $request->description;
 
+        $category->save();
+
+        return redirect()->back()->withSuccess('Категория была обновлена');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Category  $catalog
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Category $catalog)
+    public function destroy(Category $category)
     {
-        //
+
+        $category->delete();
+
+        return redirect()->back()->withSuccess('Категория была удалена');
+
     }
 }

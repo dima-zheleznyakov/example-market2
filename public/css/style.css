@@ -182,7 +182,10 @@ header .logo-text{
     height: 300px;
 }
 .catalog .catalog_item .catalog_img img{
-    width: 100%;
+    /*width: 100%;*/
+    width: 75%;
+    display: block;
+    margin: 0 auto;
     transition: all 0.8s;
 }
 .catalog .catalog_item:hover .catalog_img img {
@@ -372,4 +375,20 @@ footer .social{
 }
 .nav-item.dropdown:hover .dropdown-menu{
     display: block;
+}
+.img-uploaded{
+    display: block;
+    width: 400px;
+}
+.my-breadcrumb{
+    margin-top: 35px;
+}
+.my-breadcrumb .my-breadcrumb-info{
+    margin-top: 10px;
+}
+.contact-page{
+    margin-top: 25px;
+}
+.contact-page .title{
+    margin: 0 auto 15px auto;
 }

@@ -1,6 +1,6 @@
 @extends('layouts.admin-layouts')
 
-@section('title', 'Редактирование категории')
+@section('title', "Редактирование категории: {$category->title}")
 
 @section('content')
 
@@ -20,8 +20,8 @@
                     </div>
                     <div class="card card-outline card-info">
                         <div class="card-body">
-                              <textarea  value="{{ $category['description'] }}"  name="description" id="summernote">
-                                Place <em>some</em> <u>text</u> <strong>here</strong>
+                              <textarea name="description" id="summernote">
+                                {{ $category['description'] }}
                               </textarea>
                         </div>
                     </div>

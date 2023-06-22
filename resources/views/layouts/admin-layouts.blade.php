@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="/admin/plugins/daterangepicker/daterangepicker.css">
     <!-- summernote -->
     <link rel="stylesheet" href="/admin/plugins/summernote/summernote-bs4.min.css">
+    <link href="/admin/dist/css/colorbox.css" rel="stylesheet">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -73,12 +74,12 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="./index.html" class="nav-link">
+                                <a href="{{ route('product.index') }}" class="nav-link">
                                     <p>Все товары</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./index2.html" class="nav-link">
+                                <a href="{{ route('product.create') }}" class="nav-link">
                                     <p>Добавить товар</p>
                                 </a>
                             </li>
@@ -121,7 +122,7 @@
         <div class="content-header">
             <div class="container-fluid">
                 <div class="row mb-2">
-                    <div class="col-sm-6">
+                    <div class="col">
                         <h1 class="m-0">@yield('title')</h1>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
@@ -179,7 +180,10 @@
 <!-- AdminLTE for demo purposes -->
 <script src="/admin/dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="https://cdn.tiny.cloud/1/4hxdc3s4zxoilkfncuy6r98gos77idfl9rbwfef0x415elzn/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 <script src="/admin/dist/js/pages/dashboard.js"></script>
 <script src="/admin/admin.js"></script>
+<script type="text/javascript" src="/admin/dist/js/jquery.colorbox-min.js"></script>
+<script type="text/javascript" src="/packages/barryvdh/elfinder/js/standalonepopup.js"></script>
 </body>
 </html>

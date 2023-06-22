@@ -112,15 +112,17 @@
                 <div class="col-md-4">
                     <div class="catalog_item">
                         <div class="catalog_img">
-                            <img src="pic/product/1.jpeg" alt="">
+                            <a href="/products/46">
+                                <img src="pic/product/1.jpeg" alt="">
+                            </a>
                         </div>
                         <div class="catalog_info">
-                            <h4 class="catalog_title"><a href="#">GENOTROPIN PFIZER (ГЕНОТРОПИН)</a></h4>
+                            <h4 class="catalog_title"><a href="/products/46">GENOTROPIN PFIZER (ГЕНОТРОПИН)</a></h4>
                             <span class="catalog_category">Категория: Гормон роста</span>
                             <div class="catalog_bottom">
                                 <hr>
                                 <div class="catalog_price"><span>Цена:</span><span>70000тг.</span></div>
-                                <a class="btn-order" href="#">Подробнее</a>
+                                <a class="btn-order" href="/products/46">Подробнее</a>
                             </div>
                         </div>
                     </div>
@@ -128,15 +130,17 @@
                 <div class="col-md-4">
                     <div class="catalog_item">
                         <div class="catalog_img">
-                            <img src="pic/product/3.jpg" alt="">
+                            <a href="/products/98">
+                                <img src="pic/product/3.jpg" alt="">
+                            </a>
                         </div>
                         <div class="catalog_info">
-                            <h4 class="catalog_title"><a href="#">TESTOSTERONE E (ТЕСТОСТЕРОН ЭНАНТАТ ) 200</a></h4>
+                            <h4 class="catalog_title"><a href="/products/98">TESTOSTERONE E (ТЕСТОСТЕРОН ЭНАНТАТ ) 200</a></h4>
                             <span class="catalog_category">Категория: Инъекционные препараты</span>
                             <div class="catalog_bottom">
                                 <hr>
                                 <div class="catalog_price"><span>Цена:</span><span>10200тг.</span></div>
-                                <a class="btn-order" href="#">Подробнее</a>
+                                <a class="btn-order" href="/products/98">Подробнее</a>
                             </div>
                         </div>
                     </div>
@@ -144,15 +148,17 @@
                 <div class="col-md-4">
                     <div class="catalog_item">
                         <div class="catalog_img">
-                            <img src="pic/product/4.png" alt="">
+                            <a href="/products/92">
+                                <img src="http://127.0.0.1:8000/files\20210108-1939_5ff8608ec1d23.jpg" alt="">
+                            </a>
                         </div>
                         <div class="catalog_info">
-                            <h4 class="catalog_title"><a href="#">STANOZOLOL (СТАНОЗОЛОЛ) 100X10MG</a></h4>
-                            <span class="catalog_category">Категория: Таблетированные препараты</span>
+                            <h4 class="catalog_title"><a href="/products/92">TRENBOLONE A (ТРЕНБОЛОН АЦЕТА) 100</a></h4>
+                            <span class="catalog_category">Категория: Инъекционные препараты</span>
                             <div class="catalog_bottom">
                                 <hr>
-                                <div class="catalog_price"><span>Цена:</span><span>5200тг.</span></div>
-                                <a class="btn-order" href="#">Подробнее</a>
+                                <div class="catalog_price"><span>Цена:</span><span>15500тг.</span></div>
+                                <a class="btn-order" href="/products/92">Подробнее</a>
                             </div>
                         </div>
                     </div>
