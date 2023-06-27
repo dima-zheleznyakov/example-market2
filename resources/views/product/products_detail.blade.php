@@ -17,8 +17,8 @@
                             <a class="breadcrumbs_item" href="/catalog">Каталог</a>
                             <i class="fa fa-angle-right" aria-hidden="true"></i>
                             @foreach($catalogs as $catalog)
-                                @if($catalog->id == $product->id_catalog)
-                                    <a class="breadcrumbs_item" href="/catalog/{{$catalog->id}}">{{ $catalog->title }}</a>
+                                @if($catalog->id == $product->catalog_id)
+                                    <span class="breadcrumbs_item active">{{ $catalog->title }}</span>
                                 @endif
                             @endforeach
                         </div>
@@ -32,6 +32,11 @@
                         <a href="#" class="btn btn-detail-order">
                             <i class="fa fa-whatsapp"></i> WhatsApp
                         </a>
+                        <form method="POST" action="/catalog/carts-add">
+                            @csrf
+                            <input name="product_id" type="hidden" value="{{$product->id}}">
+                            <button class="btn-order" type="submit">Купить</button>
+                        </form>
                     </div>
                 </div>
             </div>

@@ -45,6 +45,11 @@
                                                 <hr>
                                                 <div class="catalog_price"><span>Цена:</span><span>{{ $product->price }}тг.</span></div>
                                                 <a class="btn-order" href="/products/{{$product->id}}">Подробнее</a>
+{{--                                                <form method="POST" action="/catalog/carts-add">--}}
+{{--                                                    @csrf--}}
+{{--                                                    <input name="product_id" type="hidden" value="{{$product->id}}">--}}
+{{--                                                    <button class="btn-order" type="submit">Купить</button>--}}
+{{--                                                </form>--}}
                                             </div>
                                         </div>
                                     </div>

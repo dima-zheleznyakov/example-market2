@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\AdminProductController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\CartItemController;
 use App\Http\Controllers\CatalogController;
 use App\Http\Controllers\HomePageController;
@@ -27,7 +28,10 @@ Route::get('/', [HomePageController::class, 'index']);
 Route::get('catalog', [CatalogController::class, 'index']);
 Route::get('catalog/{id}', [CatalogController::class, 'get']);
 Route::get('products/{id}', [ProductController::class, 'get']);
-Route::post('add-to-cart', [CartItemController::class, 'addToCart']);
+
+Route::get('carts', [CartItemController::class, 'index']);
+Route::post('/catalog/carts-add', [CartController::class, 'addCarts']);
+
 
 Route::post("send-email", [PHPMailerController::class, "composeEmail"])->name("send-email");
 

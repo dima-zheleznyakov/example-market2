@@ -215,7 +215,7 @@ header .logo-text{
     justify-content: space-between;
     font-size: 18px;
 }
-.catalog .catalog_item .btn-order{
+.btn-order{
     background: #323e56;
     display: inline-block;
     width: 100%;
@@ -226,9 +226,13 @@ header .logo-text{
     margin-top: 13px;
     transition: all 0.5s;
 }
-.catalog .catalog_item .btn-order:hover {
+.btn-order:hover {
     background: #1b273d;
     text-decoration: none;
+}
+.detail .btn-order{
+    width: 200px;
+    border: none;
 }
 .contact{
     margin-top: 70px;
