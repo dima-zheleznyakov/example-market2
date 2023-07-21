@@ -7,6 +7,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\CartItemController;
 use App\Http\Controllers\CatalogController;
 use App\Http\Controllers\HomePageController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\PHPMailerController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
@@ -30,7 +31,13 @@ Route::get('catalog/{id}', [CatalogController::class, 'get']);
 Route::get('products/{id}', [ProductController::class, 'get']);
 
 Route::get('carts', [CartItemController::class, 'index']);
+Route::post('/update/cart-item', [CartController::class, 'updateCartItem']);
 Route::post('/catalog/carts-add', [CartController::class, 'addCarts']);
+Route::post('/delete/product', [CartController::class, 'delete']);
+Route::post('/delete/product/all', [CartController::class, 'deleteAll']);
+
+
+Route::post('/order', [OrderController::class, 'order']);
 
 
 Route::post("send-email", [PHPMailerController::class, "composeEmail"])->name("send-email");

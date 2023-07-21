@@ -25,13 +25,12 @@ class MenuCategoryController extends Controller
     {
         $userId = Auth::id();
 
-//        dd($userId);
-
         if (null === $userId) return null;
 
         $cart = Cart::where('user_id', $userId)->get();
 
         return CartItem::where('cart_id', $cart->id)->get();
     }
+
 
 }

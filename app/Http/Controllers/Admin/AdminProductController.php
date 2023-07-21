@@ -104,7 +104,7 @@ class AdminProductController extends Controller
         $product->title = $request->title;
         $product->description = $request->description;
         $product->price = $request->price;
-        $product->img_url = $request->img_url;
+        $product->img_url = str_replace('\\', '/', $request->img_url);
         $product->save();
 
         return redirect()->back()->withSuccess('Продукт Обновлен');

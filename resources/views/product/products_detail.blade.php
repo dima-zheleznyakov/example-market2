@@ -2,7 +2,7 @@
 @section('content')
 
     <section class="detail">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-4">
                     <div class="detail-photo laptop">
@@ -18,7 +18,7 @@
                             <i class="fa fa-angle-right" aria-hidden="true"></i>
                             @foreach($catalogs as $catalog)
                                 @if($catalog->id == $product->catalog_id)
-                                    <span class="breadcrumbs_item active">{{ $catalog->title }}</span>
+                                    <a class="breadcrumbs_item " href="/catalog/{{ $catalog->id }}">{{ $catalog->title }}</a>
                                 @endif
                             @endforeach
                         </div>
@@ -29,14 +29,23 @@
                         <div class="price">
                             <span>Цена:</span> <span>{{ $product->price }}тг.</span>
                         </div>
-                        <a href="#" class="btn btn-detail-order">
-                            <i class="fa fa-whatsapp"></i> WhatsApp
-                        </a>
-                        <form method="POST" action="/catalog/carts-add">
+                        <form class="form-order ajax_form" action="/catalog/carts-add" method="POST" id="ajax_form" >  {{--    action="/catalog/carts-add"--}}
                             @csrf
+                            <label>
+                                <span>Количество:</span>
+                                <input class="quantity form-control" type="number" name="quantity" value="1">
+                            </label>
+                            <br>
                             <input name="product_id" type="hidden" value="{{$product->id}}">
-                            <button class="btn-order" type="submit">Купить</button>
+                            <button id="btn" class="btn btn-order" type="submit">В корзину</button>
+                            @if(session('success'))
+                                <div class="alert alert-success add-to-carts" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                                    <h4><i class="icon fa fa-check"></i> {{ session('success') }}</h4>
+                                </div>
+                            @endif
                         </form>
+                        <div id="result_form"></div>
                     </div>
                 </div>
             </div>
@@ -46,8 +55,6 @@
             </div>
         </div>
     </section>
-
-
 
 
 @endsection

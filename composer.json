@@ -8,12 +8,11 @@
         "php": "^7.3|^8.0",
         "barryvdh/laravel-elfinder": "^0.4.7",
         "fruitcake/laravel-cors": "^2.0",
-        "guzzlehttp/guzzle": "^7.0.1",
+        "guzzlehttp/guzzle": "^7.7",
         "laravel/breeze": "1.9.2",
         "laravel/framework": "^8.75",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
-        "phpmailer/phpmailer": "^6.8",
         "spatie/laravel-permission": "^5.10"
     },
     "require-dev": {

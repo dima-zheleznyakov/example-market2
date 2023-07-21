@@ -11,27 +11,44 @@ use Illuminate\Support\Facades\Auth;
 class CartItemController extends Controller
 {
 
-
-
     public function index()
     {
 
         $user_id = Auth::id();
-        $cart_id = Cart::where('user_id', $user_id)->first();
 
-        $cart_id = $cart_id->id;
+        if ($user_id === null) {
 
-        // Записи cart item пользователя
-        $cartItem = CartItem::where('cart_id', $cart_id)->get();
+            return redirect('login');
 
-        foreach($cartItem as $item){
-            $products[] = Product::where('id', $item->product_id)->first();
+        } else {
+
+            $cart_id = Cart::where('user_id', $user_id)->first();
+
+            $cart_id = $cart_id->id;
+
+            // Записи cart item пользователя
+            $cartItem = CartItem::where('cart_id', $cart_id)->get();
+
+            foreach ($cartItem as $item) {
+                $products[] = Product::where('id', $item->product_id)->first();
+            }
+
+            if(!empty($products)){
+                return view('carts', [
+                    'products' => $products,
+                    'cartItem' => $cartItem
+                ]);
+            } else {
+                return view('carts');
+            }
+
         }
 
-        return view('carts', [
-            'products' => $products
-        ]);
+    }
 
+    public function getCartItems()
+    {
+        return Cart::all();
     }
 
 }

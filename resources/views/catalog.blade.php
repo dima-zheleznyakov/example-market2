@@ -21,6 +21,12 @@
                 <span class="breadcrumbs_item active">Каталог</span>
             @endif
         </div>
+        @if(session('success'))
+            <div class="alert alert-success add-to-carts add-to-carts-in-catalog" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                <h4><i class="icon fa fa-check"></i> {{ session('success') }}</h4>
+            </div>
+        @endif
     </div>
 
 
@@ -28,34 +34,29 @@
         <div class="row">
             <div class="col-md-9 order-md-1 order-last">
                 <section class="catalog catalog_page">
-                    <div class="container-fluid">
-                        <div class="row">
-                            @foreach($products as $product)
-                                <div class="col-md-3">
-                                    <div class="catalog_item">
-                                        <div class="catalog_img">
-                                            <a href="/products/{{$product->id}}">
-                                            <img src="{{asset($product->img_url)}}" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="catalog_info">
-                                            <h4 class="catalog_title"><a href="/products/{{$product->id}}">{{ $product->title }}</a></h4>
-                                            <span class="catalog_category">Категория: Инъекционные препараты</span>
-                                            <div class="catalog_bottom">
-                                                <hr>
-                                                <div class="catalog_price"><span>Цена:</span><span>{{ $product->price }}тг.</span></div>
-                                                <a class="btn-order" href="/products/{{$product->id}}">Подробнее</a>
-{{--                                                <form method="POST" action="/catalog/carts-add">--}}
-{{--                                                    @csrf--}}
-{{--                                                    <input name="product_id" type="hidden" value="{{$product->id}}">--}}
-{{--                                                    <button class="btn-order" type="submit">Купить</button>--}}
-{{--                                                </form>--}}
-                                            </div>
+                    <div class="row">
+                        @foreach($products as $product)
+                            <div class="col-md-4">
+                                <div class="product_item">
+                                    <a href="/products/{{$product->id}}">
+                                        <div class="product_img" style="background-image: url({{ str_replace('\\', '/', $product->img_url) }});"></div>
+                                    </a>
+                                    <div class="product_text">
+                                        <h1 class="title"><a href="/products/{{$product->id}}">{{ $product->title }}</a></h1>
+{{--                                            <p class="descr">Инъекционные препараты</p>--}}
+                                        <div class="product_btn">
+                                            <form method="POST" action="/catalog/carts-add" id="ajax_form"  class="form-btn ajax_form">
+                                                @csrf
+                                                <input name="product_id" type="hidden" value="{{$product->id}}">
+                                                <input name="quantity" type="hidden" value="1">
+                                                <button id="btn" type="submit">В корзину</button>
+                                            </form>
+                                            <span>{{ $product->price }}тг.</span>
                                         </div>
                                     </div>
                                 </div>
-                            @endforeach
-                        </div>
+                            </div>
+                        @endforeach
                     </div>
                 </section>
             </div>
@@ -70,7 +71,7 @@
                 </div>
             </div>
         </div>
-        {{ $products->links() }}
+        <div class="navigation">{{ $products->links() }}</div>
     </div>
 
 @endsection

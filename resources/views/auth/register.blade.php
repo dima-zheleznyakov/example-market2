@@ -64,30 +64,30 @@
 @extends('layouts.app-home')
 
 @section('content')
-
+<section class="login">
     <div class="container container-ver2 mt-40px">
         <div class="page-login box space-50">
             <div class="row" style="
     display: flex;
     justify-content: center;
 ">
-                <div class="col-md-4">
-                    <div class="register box space-50">
-                        <h3>Зарегестрироваться</h3>
+                <div class="col-md-5">
+                    <div class="register form-wrapper box space-50">
+                        <h4 class="text-center">Регистрация</h4>
                         <x-auth-validation-errors class="mb-4" :errors="$errors" />
                         <form action="{{ route('register') }}" class="form-horizontal" method="POST">
                             @csrf
 
                             <div class="group box space-10">
-                                <x-label for="email" :value="__('Email')" />
+{{--                                <x-label for="email" :value="__('Email')" />--}}
                                 <x-input id="email" type="email" name="email" placeholder="Ваш email"  :value="old('email')" required />
                             </div>
                             <div class="group box space-10">
-                                <x-label for="name" :value="__('Имя')" />
+{{--                                <x-label for="name" :value="__('Имя')" />--}}
                                 <x-input id="name" class="block mt-1 w-full" type="text" name="name" placeholder="Ваше имя"  :value="old('name')" required autofocus />
                             </div>
                             <div class="group box space-10">
-                                <x-label for="password" :value="__('Пароль')" />
+{{--                                <x-label for="password" :value="__('Пароль')" />--}}
                                 <x-input id="password"
                                                 type="password"
                                                 name="password"
@@ -95,7 +95,7 @@
                                                 required autocomplete="new-password" />
                             </div>
                             <div class="group box space-10">
-                                <x-label for="password_confirmation" :value="__('Повторите пароль')" />
+{{--                                <x-label for="password_confirmation" :value="__('Повторите пароль')" />--}}
 
                                 <x-input id="password_confirmation" class="block mt-1 w-full"
                                                 type="password"
@@ -106,6 +106,7 @@
                             <x-button class="link-v1 rt">
                                 {{ __('Зарегистрироваться') }}
                             </x-button>
+                            <p class="text-center register">Уже есть аккаунт? <a href="/login">Войти</a></p>
                         </form>
                     </div>
                     <!-- End register -->
@@ -115,7 +116,7 @@
             </div>
         </div>
     </div>
-
+</section>
 
 
 @endsection

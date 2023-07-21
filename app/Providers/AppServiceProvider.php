@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\CartItemController;
 use App\Http\Controllers\MenuCategoryController;
 use Illuminate\Support\ServiceProvider;
@@ -27,14 +28,21 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $catalogController = new MenuCategoryController();
-        $menuCatalog = $catalogController->getMenuCatalog();
+//        $cart = new MenuCategoryController();
+//        $menuCart = $cart->getCartItems();
+//
+////        // Передаем menuCart во все шаблоны
+//        view()->share('menuCart', $menuCart);
+        $cartsController = new CartItemController();
+        $carts = $cartsController->getCartItems();
 
-//        $cartItems = $catalogController->getCartItems();
+        view()->share('carts', $carts);
 
-        // Передаем $menuCatalog во все шаблоны
-        view()->share('menuCatalog', $menuCatalog);
-//        view()->share('cartItems', $cartItems);
+        $cartItemsContr = new CartController();
+        $cartItems = $cartItemsContr->getCartQuantity();
+
+        view()->share('cartItems', $cartItems);
+
 
     }
 
