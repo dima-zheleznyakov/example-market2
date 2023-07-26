@@ -756,5 +756,26 @@ section.login{
 .add-to-carts-in-catalog{
     margin-top: 0;
 }
-
-
+.checkout-success-title {
+    margin-top: 35px;
+}
+.checkout-success-title h1{
+    font-size: 1.875rem;
+    font-weight: normal;
+    margin: 0 0 1.25rem 0;
+}
+.checkout-success-content-top {
+    font-size: 1rem;
+}
+.vertical-interval-small {
+    margin-top: 0.4375rem;
+    margin-bottom: 0.4375rem;
+}
+.checkout-success-content {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.carts-wrapper{
+    min-height: 500px;
+}

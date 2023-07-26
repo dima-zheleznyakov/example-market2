@@ -8,8 +8,9 @@ use App\Http\Controllers\CartItemController;
 use App\Http\Controllers\CatalogController;
 use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\OrderController;
-use App\Http\Controllers\PHPMailerController;
 use App\Http\Controllers\ProductController;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\TestMail;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -39,9 +40,6 @@ Route::post('/delete/product/all', [CartController::class, 'deleteAll']);
 
 Route::post('/order', [OrderController::class, 'order']);
 
-
-Route::post("send-email", [PHPMailerController::class, "composeEmail"])->name("send-email");
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
@@ -56,7 +54,10 @@ Route::middleware(['role:admin'])->prefix('admin_panel')->group( function () {
     Route::resource('product', AdminProductController::class);
 });
 
-
+Route::get('/clear', function () {
+    Artisan::call('route:clear');
+    return 'Routes cache cleared successfully.';
+});
 require __DIR__.'/auth.php';
 
 

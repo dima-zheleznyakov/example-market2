@@ -22,24 +22,21 @@
                </div>
            </div>
        </div> <!-- carts-top -->
-
-        <div class="carts">
-
-            <div class="carts-head cart-item d-flex">
-                <div>Товар</div>
-                <div>Цена за ед.</div>
-                <div>Количество</div>
-                <div>Стоимость</div>
-                <div>
-                    <form action="/delete/product/all" method="post">
-                        @csrf
-                        <button class="delete"  type="submit"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-                    </form>
-                </div>
-            </div>
-
-            <div class="carts-body">
             @if(!empty($products))
+            <div class="carts">
+                <div class="carts-head cart-item d-flex">
+                    <div>Товар</div>
+                    <div>Цена за ед.</div>
+                    <div>Количество</div>
+                    <div>Стоимость</div>
+                    <div>
+                        <form action="/delete/product/all" method="post">
+                            @csrf
+                            <button class="delete"  type="submit"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="carts-body">
                 @foreach($products as $product)
                     <div class="cart-item d-flex">
                         <div>
@@ -76,12 +73,19 @@
                         </div>
                     </div> <!-- cart-item -->
                 @endforeach
+                </div> <!-- carts-body -->
+            </div> <!-- carts -->
+
+            @elseif(session('success'))
+                <div class="alert alert-success add-to-carts" style="margin: 0 auto;text-align: center;width: 360px; role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                    <h4><i class="icon fa fa-check"></i> {{ session('success') }}</h4>
+                </div>
             @else
                 <span class="title" style="color: #3a4956; font-size: 30px">Корзина пустая</span>
             @endif
-            </div> <!-- carts-body -->
-        </div> <!-- carts -->
 
+    @if(!empty($products))
         <div class="order">
             <div class="total price-cart">Итого: <span id="total-cart-price"></span></div>
             <!-- Кнопка-триггер модального окна -->
@@ -110,10 +114,9 @@
                                 <label for="number">Контактный телефон</label> <br>
                                 <input required type="number" id="number" name="number" class="form-control" placeholder="Введите ваш номер" >
 
-                                <label for="comment">Контактный телефон</label> <br>
-                                <textarea id="comment" class="form-control"
-                                          placeholder="Укажите тут свои комментарии и пожелания по данному заказу"
-                                          name="comment"></textarea>
+                                <label for="comment">Комментарий</label> <br>
+                                <textarea name="comment" id="comment" class="form-control"
+                                placeholder="Укажите тут свои комментарии и пожелания по данному заказу"></textarea>
                             </div>
                             <div class="modal-footer">
                                 <button type="submit" class="btn btn-primary">Заказать</button>
@@ -123,7 +126,7 @@
                 </div>
             </div>
         </div> <!-- order -->
-
+    @endif
     </div> <!-- container-fluid -->
 </section> <!-- carts-wrapper -->
 
