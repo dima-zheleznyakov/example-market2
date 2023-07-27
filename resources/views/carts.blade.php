@@ -3,137 +3,236 @@
 
 <section class="carts-wrapper">
     <div class="container-fluid">
-
-       <div class="carts-top">
-            <div class="breadcrumbs">
-                <a class="breadcrumbs_item" href="/">Главная</a>
-                <i class="fa fa-angle-right" aria-hidden="true"></i>
-                <span class="breadcrumbs_item active" >Корзина</span>
-            </div>
-           <div class="dropdown">
-               <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                   {{ Auth::user()->name }}
-               </button>
-               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                   <form  class="dropdown-item"  method="POST" action="{{ route('logout') }}">
-                       @csrf
-                       <button >Выйти</button>
-                   </form>
-               </div>
-           </div>
-       </div> <!-- carts-top -->
-            @if(!empty($products))
-            <div class="carts">
-                <div class="carts-head cart-item d-flex">
-                    <div>Товар</div>
-                    <div>Цена за ед.</div>
-                    <div>Количество</div>
-                    <div>Стоимость</div>
-                    <div>
-                        <form action="/delete/product/all" method="post">
-                            @csrf
-                            <button class="delete"  type="submit"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-                        </form>
-                    </div>
+           <div class="carts-top">
+                <div class="breadcrumbs">
+                    <a class="breadcrumbs_item" href="/">Главная</a>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    <span class="breadcrumbs_item active" >Корзина</span>
                 </div>
-                <div class="carts-body">
-                @foreach($products as $product)
-                    <div class="cart-item d-flex">
+               <div class="dropdown">
+                   <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       {{ Auth::user()->name }}
+                   </button>
+                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                       <form  class="dropdown-item"  method="POST" action="{{ route('logout') }}">
+                           @csrf
+                           <button >Выйти</button>
+                       </form>
+                   </div>
+               </div>
+           </div> <!-- carts-top -->
+        <!-- Версия корзины для пк -->
+        <div class="carts-wrapper-laptop">
+            @if(!empty($products))
+                <div class="carts">
+                    <div class="carts-head cart-item d-flex">
+                        <div>Товар</div>
+                        <div>Цена за ед.</div>
+                        <div>Количество</div>
+                        <div>Стоимость</div>
                         <div>
-                            <div class="photo-wrapper">
-                                <a href="/products/{{ $product->id }}">
-                                    <img src="{{ $product->img_url }}">
+                            <form action="/delete/product/all" method="post">
+                                @csrf
+                                <button class="delete"  type="submit"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="carts-body">
+                    @foreach($products as $product)
+                        <div class="cart-item d-flex">
+                            <div>
+                                <div class="photo-wrapper">
+                                    <a href="/products/{{ $product->id }}">
+                                        <img src="{{ $product->img_url }}">
+                                    </a>
+                                </div>
+                                <a class="carts-title" href="/products/{{ $product->id }}">
+                                    {{ $product->title }}
                                 </a>
                             </div>
-                            <a class="carts-title" href="/products/{{ $product->id }}">
-                                {{ $product->title }}
-                            </a>
-                        </div>
-                        <div>
-                            <div class="price" id="price">{{ $product->price }}</div>
-                        </div>
-                        <div>
-                            <form class="quantity-form" action="" method="POST">
-                                @foreach($cartItem as $quantity)
-                                    @if($quantity->product_id == $product->id)
-                                        <input class="quantity form-control" id="quantity_{{ $product->id }}" type="number" name="quantity" min="1"  data-price="{{ $product->price }}" value="{{ $quantity->quantity }}"> <span>шт.</span>
-                                    @endif
-                                @endforeach
-                            </form>
-                        </div>
-                        <div>
-                            <div  class="total-price"  id="total-price_{{ $product->id }}"></div>
-                        </div>
-                        <div>
-                            <form action="/delete/product" method="POST">
+                            <div>
+                                <div class="price" id="price">{{ $product->price }}</div>
+                            </div>
+                            <div>
+                                <form class="quantity-form" action="" method="POST">
+                                    @foreach($cartItem as $quantity)
+                                        @if($quantity->product_id == $product->id)
+                                            <input class="quantity form-control" id="quantity_{{ $product->id }}" type="number" name="quantity" min="1"  data-price="{{ $product->price }}" value="{{ $quantity->quantity }}"> <span>шт.</span>
+                                        @endif
+                                    @endforeach
+                                </form>
+                            </div>
+                            <div>
+                                <div  class="total-price"  id="total-price_{{ $product->id }}"></div>
+                            </div>
+                            <div>
+                                <form action="/delete/product" method="POST">
+                                    @csrf
+                                    <input type="hidden" name="id" value="{{ $product->id }}">
+                                    <button class="delete" type="submit"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                </form>
+                            </div>
+                        </div> <!-- cart-item -->
+                    @endforeach
+                    </div> <!-- carts-body -->
+                </div> <!-- carts -->
+
+                @elseif(session('success'))
+                    <div class="alert alert-success add-to-carts" style="margin: 0 auto;text-align: center;width: 360px; role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                        <h4><i class="icon fa fa-check"></i> {{ session('success') }}</h4>
+                    </div>
+                @else
+                    <span class="title" style="color: #3a4956; font-size: 30px">Корзина пустая</span>
+                @endif
+
+        @if(!empty($products))
+            <div class="order">
+                <div class="total price-cart">Итого: <span id="total-cart-price"></span></div>
+                <!-- Кнопка-триггер модального окна -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Купить в один клик
+                </button>
+                <!-- Модальное окно -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Оформление заказа</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <form class="form-order" action="/order" method="POST">
                                 @csrf
-                                <input type="hidden" name="id" value="{{ $product->id }}">
-                                <button class="delete" type="submit"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                <div class="modal-body">
+                                    <span>Пожалуйста, укажите ваш контактный телефон. <br>
+                                    Мы свяжемся с вами в ближайшее время.</span> <br>
+
+                                    <label for="name">Ваше имя</label> <br>
+                                    <input required type="text" id="name" name="name" class="form-control" placeholder="Введите ваше имя" >
+
+                                    <label for="number">Контактный телефон</label> <br>
+                                    <input required type="number" id="number" name="number" class="form-control" placeholder="Введите ваш номер" >
+
+                                    <label for="comment">Комментарий</label> <br>
+                                    <textarea name="comment" id="comment" class="form-control"
+                                    placeholder="Укажите тут свои комментарии и пожелания по данному заказу"></textarea>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-primary">Заказать</button>
+                                </div>
                             </form>
                         </div>
-                    </div> <!-- cart-item -->
-                @endforeach
-                </div> <!-- carts-body -->
-            </div> <!-- carts -->
-
-            @elseif(session('success'))
-                <div class="alert alert-success add-to-carts" style="margin: 0 auto;text-align: center;width: 360px; role="alert">
-                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
-                    <h4><i class="icon fa fa-check"></i> {{ session('success') }}</h4>
-                </div>
-            @else
-                <span class="title" style="color: #3a4956; font-size: 30px">Корзина пустая</span>
-            @endif
-
-    @if(!empty($products))
-        <div class="order">
-            <div class="total price-cart">Итого: <span id="total-cart-price"></span></div>
-            <!-- Кнопка-триггер модального окна -->
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                Купить в один клик
-            </button>
-            <!-- Модальное окно -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Оформление заказа</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <form class="form-order" action="/order" method="POST">
-                            @csrf
-                            <div class="modal-body">
-                                <span>Пожалуйста, укажите ваш контактный телефон. <br>
-                                Мы свяжемся с вами в ближайшее время.</span> <br>
-
-                                <label for="name">Ваше имя</label> <br>
-                                <input required type="text" id="name" name="name" class="form-control" placeholder="Введите ваше имя" >
-
-                                <label for="number">Контактный телефон</label> <br>
-                                <input required type="number" id="number" name="number" class="form-control" placeholder="Введите ваш номер" >
-
-                                <label for="comment">Комментарий</label> <br>
-                                <textarea name="comment" id="comment" class="form-control"
-                                placeholder="Укажите тут свои комментарии и пожелания по данному заказу"></textarea>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="submit" class="btn btn-primary">Заказать</button>
-                            </div>
-                        </form>
                     </div>
                 </div>
-            </div>
-        </div> <!-- order -->
-    @endif
+            </div> <!-- order -->
+        @endif
+        </div> <!-- carts-wrapper-laptop -->
+
+
+        <!-- Версия корзины для моб -->
+{{--        <div class="carts-wrapper-mobile">--}}
+{{--        @if(!empty($products))--}}
+{{--            @foreach($products as $product)--}}
+{{--            <div class="carts-mobile-item">--}}
+{{--                <div class="row">--}}
+{{--                    <div class="col-4">--}}
+{{--                        <div class="carts-img">--}}
+{{--                            <img src="{{ $product->img_url }}" alt="{{ $product->title }}">--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="col-8">--}}
+{{--                        <h2s>--}}
+{{--                            <a class="title" href="/products/{{ $product->id }}">--}}
+{{--                                {{ $product->title }}--}}
+{{--                            </a>--}}
+{{--                        </h2s>--}}
+{{--                        <div class="carts-info">--}}
+{{--                            <div class="price">--}}
+{{--                                <span>Цена за ед.:</span>--}}
+{{--                                <div class="price" id="price">{{ $product->price }}тг.</div>--}}
+{{--                            </div>--}}
+{{--                            <div class="update">--}}
+{{--                                <form class="quantity-form" action="" method="POST">--}}
+{{--                                    @foreach($cartItem as $quantity)--}}
+{{--                                        @if($quantity->product_id == $product->id)--}}
+{{--                                            <input class="quantity form-control" id="quantity_{{ $product->id }}" type="number" name="quantity" min="1"  data-price="{{ $product->price }}" value="{{ $quantity->quantity }}"> <span>шт.</span>--}}
+{{--                                        @endif--}}
+{{--                                    @endforeach--}}
+{{--                                </form>--}}
+{{--                                <form action="/delete/product" method="POST">--}}
+{{--                                    @csrf--}}
+{{--                                    <input type="hidden" name="id" value="{{ $product->id }}">--}}
+{{--                                    <button class="delete" type="submit"><i class="fa fa-trash-o" aria-hidden="true"></i></button>--}}
+{{--                                </form>--}}
+{{--                            </div>--}}
+{{--                            <div class="total-price-one">--}}
+{{--                                <span>Стоимость: </span>--}}
+{{--                                <div class="total-price" id="total-price_{{ $product->id }}"></div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            @endforeach--}}
+{{--        @elseif(session('success'))--}}
+{{--            <div class="alert alert-success add-to-carts" style="margin: 0 auto;text-align: center;width: 360px; role="alert">--}}
+{{--                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>--}}
+{{--                <h4><i class="icon fa fa-check"></i> {{ session('success') }}</h4>--}}
+{{--            </div>--}}
+{{--        @else--}}
+{{--            <span class="title" style="color: #3a4956; font-size: 30px">Корзина пустая</span>--}}
+{{--        @endif--}}
+{{--        @if(!empty($products))--}}
+{{--            <div class="order">--}}
+{{--                <div class="total price-cart">Итого: <span id="total-cart-price"></span></div>--}}
+{{--                <!-- Кнопка-триггер модального окна -->--}}
+{{--                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">--}}
+{{--                    Купить в один клик--}}
+{{--                </button>--}}
+{{--                <!-- Модальное окно -->--}}
+{{--                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">--}}
+{{--                    <div class="modal-dialog modal-dialog-centered">--}}
+{{--                        <div class="modal-content">--}}
+{{--                            <div class="modal-header">--}}
+{{--                                <h5 class="modal-title" id="exampleModalLabel">Оформление заказа</h5>--}}
+{{--                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">--}}
+{{--                                    <span aria-hidden="true">&times;</span>--}}
+{{--                                </button>--}}
+{{--                            </div>--}}
+{{--                            <form class="form-order" action="/order" method="POST">--}}
+{{--                                @csrf--}}
+{{--                                <div class="modal-body">--}}
+{{--                                        <span>Пожалуйста, укажите ваш контактный телефон. <br>--}}
+{{--                                        Мы свяжемся с вами в ближайшее время.</span> <br>--}}
+
+{{--                                    <label for="name">Ваше имя</label> <br>--}}
+{{--                                    <input required type="text" id="name" name="name" class="form-control" placeholder="Введите ваше имя" >--}}
+
+{{--                                    <label for="number">Контактный телефон</label> <br>--}}
+{{--                                    <input required type="number" id="number" name="number" class="form-control" placeholder="Введите ваш номер" >--}}
+
+{{--                                    <label for="comment">Комментарий</label> <br>--}}
+{{--                                    <textarea name="comment" id="comment" class="form-control"--}}
+{{--                                              placeholder="Укажите тут свои комментарии и пожелания по данному заказу"></textarea>--}}
+{{--                                </div>--}}
+{{--                                <div class="modal-footer">--}}
+{{--                                    <button type="submit" class="btn btn-primary">Заказать</button>--}}
+{{--                                </div>--}}
+{{--                            </form>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div> <!-- order -->--}}
+{{--        @endif--}}
+{{--        </div>  <!-- carts-wrapper-mobile -->--}}
     </div> <!-- container-fluid -->
 </section> <!-- carts-wrapper -->
 
+
 <script>
-
     // обновление количества товара
-
     // Функция для обновления общей стоимости
     function updateTotalPrice(productId) {
         const quantityInput = document.getElementById('quantity_' + productId);
@@ -192,9 +291,7 @@
         });
         updateTotalPrice(productId);
     });
-
 </script>
-
 @endsection
 
 

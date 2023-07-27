@@ -9,6 +9,7 @@ use App\Http\Controllers\CatalogController;
 use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SearchController;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\TestMail;
 use Illuminate\Support\Facades\Route;
@@ -26,7 +27,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomePageController::class, 'index']);
 
-
 Route::get('catalog', [CatalogController::class, 'index']);
 Route::get('catalog/{id}', [CatalogController::class, 'get']);
 Route::get('products/{id}', [ProductController::class, 'get']);
@@ -37,8 +37,16 @@ Route::post('/catalog/carts-add', [CartController::class, 'addCarts']);
 Route::post('/delete/product', [CartController::class, 'delete']);
 Route::post('/delete/product/all', [CartController::class, 'deleteAll']);
 
-
 Route::post('/order', [OrderController::class, 'order']);
+
+Route::get('/search', [SearchController::class, 'index']);
+
+
+
+
+
+
+    // админка
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -47,17 +55,12 @@ Route::get('/dashboard', function () {
 Route::get('contact', function (){
     return view('contact');
 });
-
 Route::middleware(['role:admin'])->prefix('admin_panel')->group( function () {
     Route::get('/', [HomeController::class, 'index'])->name('homeAdmin');
     Route::resource('category', CategoryController::class);
     Route::resource('product', AdminProductController::class);
 });
 
-Route::get('/clear', function () {
-    Artisan::call('route:clear');
-    return 'Routes cache cleared successfully.';
-});
 require __DIR__.'/auth.php';
 
 

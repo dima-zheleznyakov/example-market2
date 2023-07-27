@@ -11,7 +11,7 @@
             <div class="col-lg-6 col-1 d-flex align-items-center justify-content-center mobile-none">
                 <div class="header-menu">
                     <ul class="d-flex">
-                        <li class="header-menu__item"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                        <li class="header-menu__item"><a href="/search"><i class="fa fa-search" aria-hidden="true"></i></a></li>
                         <li class="header-menu__item"><a href="/"><i class="home"></i></a></li>
                         <li class="header-menu__item"><a href="/catalog">Продукция</a></li>
                         <li class="header-menu__item"><a href="/contact">Контакты</a></li>
@@ -53,11 +53,27 @@
                         <li class="header-menu__item"><a href="/contact">Контакты</a></li>
                         <li class="header-menu__item icon"><a href="/login"><i class="fa fa-user" aria-hidden="true"></i></a></li>
 
-                        <li class="header-menu__item icon">
+                        <li class="header-menu__item  icon">
                             <a href="/carts">
                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                <span class="cart-quantity"></span>
-                            </a>
+
+                            <?
+                            if (Auth::id() !== null){
+                                $quantity = 0;
+                                foreach ($carts as $cart){
+                                    foreach ($cartItems as $cartItem){
+                                        if ($cart->user_id === \Illuminate\Support\Facades\Auth::id()){
+                                            if ($cart->id === $cartItem->cart_id){
+                                                $quantity++;
+                                            }
+                                        }
+                                    }
+                                }
+                                if($quantity > 0){
+                                    echo "<div class='cart-quantity'><span>" . $quantity . "</span></div>";
+                                }
+                            }
+                            ?>
                         </li>
 
                     </ul>

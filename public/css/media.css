@@ -410,7 +410,18 @@
     .product_item .product_btn{
         bottom: 16px;
     }
-
+    .carts-wrapper-mobile{
+        display: block;
+    }
+    .carts-wrapper-laptop{
+        display: none;
+    }
+    .carts-top .dropdown{
+        top: -6px;
+    }
+    main{
+        min-height: 300px;
+    }
 }
 
 
